@@ -6,8 +6,8 @@ $books=[
         'Publish Date'=>'2018',
         'Author'=>'Robert Greene',
         'Page'=>'624',
-        'Link'=>'https://www.amazon.com/48-Laws-Power-Robert-Greene/dp/0140280197',
-        'Image'=>'https://m.media-amazon.com/images/I/61XUtQ7NTgL._SL1500_.jpg'
+        'Link'=>'https://www.amazon.com/Laws-Human-Nature-Robert-Greene/dp/0525428143',
+        'Image'=>'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71OMelbI6sL._SL1500_.jpg'
     ],
     [
         'Name'=>'The 48 Laws of Power',
