@@ -1,0 +1,16 @@
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #RewriteCond %{HTTPS}% !=on
+    #RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+    
+    #Redirect file names to .php extension
+    RewriteCond %{REQUEST_FILENAME}% !(.*).php
+    
+    #ROUTE EVERYTHING TO INDEX
+    RewriteRule ^(.*)$ index.php [QSA,L]
+    #Disable Access on .PHP Files
+    RewriteCond %{THE_REQUEST}% \s/+(.+?)\.php[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,NE,L]
+    
+</IfModule>
