@@ -1,9 +1,7 @@
 <?php
-
-
+  
         $user=$_SERVER["HTTP_USER_AGENT"];
-        $Device;
-
+        $Device; 
         for ($i=0;$i<strlen($user);$i++){
             if ($user[$i]=='(') {
                 $flag=true;
