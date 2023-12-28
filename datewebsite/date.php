@@ -111,6 +111,7 @@ body {
         
     </head> 
     <body>
+     
         <div class="container">
             <div >
                 <h1 class = "header_text">Do you wanna go out with me?</h1>
@@ -120,13 +121,16 @@ body {
             </div>
             <div class = "buttons">
                 <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
-                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" >No</button>
                 <script>
                     function nextPage() {
-                        window.location.href = "/pleasedateme/SHESAIDYESS!";
+                        window.location.href = "/SHESAIDYESS!";
+                    
                     }
+               
                     
                     function moveButton() {
+
                         var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
                         var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
                         document.getElementById('noButton').style.left = `${x}px`;

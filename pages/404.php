@@ -6,7 +6,6 @@
 <body bgcolor="#1f2937">
     <div class="container" >
         <h1 align="center" style="color:white;font-family:Courier New">404!</h1> 
-        <h2 align="center" style="color:white;font-family:Courier New">something must be wrong here</h2> 
         <a href="/"><h3 align="center" style="color:#6366f1;font-family:Courier New">Home Page</h3></a> 
     </div>
 
