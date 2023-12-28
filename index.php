@@ -7,7 +7,7 @@ else if($_SERVER['REQUEST_URI']=='/bookstore/about') require("bookstore/controll
 else if($_SERVER['REQUEST_URI']=='/gowme'){
        require("datewebsite/fetch_agent.php");
       
-       if($Device=="Linux;" ||  $Device=="iPhone;"){
+       if($Device=="Linux" ||  $Device=="iPhone"){
             require("404.php");
             
         }else{
@@ -16,6 +16,7 @@ else if($_SERVER['REQUEST_URI']=='/gowme'){
       
 } 
 else if($_SERVER['REQUEST_URI']=='/SHESAIDYESS!') require("datewebsite/yes.html");
+else if($_SERVER['REQUEST_URI']=='/') require("default.php");
 else  require("404.php");
  
      

@@ -1,7 +1,7 @@
 <?php
     
     if($_SERVER['REQUEST_URI']=='/gowme'){
-                $load_message="Use your LAPTOP!"; 
+                $load_message="Use your LAPTOP!❤️"; 
 
     }else{
         $load_message="Oops URI Not Found!";
