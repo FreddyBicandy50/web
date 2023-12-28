@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    place-items: center;
+    height: 600px;
+    border: 2px solid #006100;
+}

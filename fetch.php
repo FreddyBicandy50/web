@@ -1,6 +1,6 @@
 <?php
 require("partials/books_db.php"); 
-function display($book){
+function display($book){ 
     print
             ("
                 <td>
@@ -14,7 +14,8 @@ function display($book){
             ");
 }
 $counter=0;
-foreach($books as $book){
+
+while($book=mysqli_fetch_assoc($result)){
     if($counter==0) echo"<tr>";
     if($_SERVER["REQUEST_URI"]=="/"){
         display($book);
@@ -33,5 +34,5 @@ foreach($books as $book){
         echo "</tr>";
     }
 }
-    
+ 
 
