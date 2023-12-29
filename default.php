@@ -9,8 +9,11 @@
           <img class="h-8 w-auto" src="https://avatars.githubusercontent.com/u/79138306?v=4" alt="">
         </a>
            <h3  style="margin-left:20px;color:#7a7df3 " class=" font-bold tracking-tight text-gray-500 sm:text-3xl">
-          <?php if ($_SERVER["SERVER_NAME"]=="kali-wsl.tail4bb6a.ts.net") echo "Testing";
-                else echo"Production Site";?>
+          <?php 
+                if ($_SERVER["SERVER_NAME"]=="kali-wsl.tail4bb6a.ts.net") echo "Testing";
+                else if ($_SERVER["SERVER_NAME"]=="raspberrypi.tail4bb6a.ts.net") echo "Production Site";
+                else echo"Online Server";
+          ?>
         </h3>  
       </div> 
     
