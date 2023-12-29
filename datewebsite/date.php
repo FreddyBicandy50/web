@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background-color: #F8C8DC;
+    background-color: #6366f1;
 }
 
 #noButton {
@@ -44,7 +44,7 @@ body {
 
 
 .btn {
-    background-color: #FFB6C1;
+    background-color: #fecbd0;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -120,8 +120,8 @@ body {
                 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
-                <button class="btn" id="noButton" onmouseover="moveButton()" >No</button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes💘</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" >No🥺</button>
                 <script>
                     function nextPage() {
                         window.location.href = "/SHESAIDYESS!";
