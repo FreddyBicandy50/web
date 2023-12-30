@@ -16,7 +16,7 @@ else if($_SERVER['REQUEST_URI']=='/gowme'){
       
 } 
 else if($_SERVER['REQUEST_URI']=='/SHESAIDYESS!') require("datewebsite/yes.html");
-else if($_SERVER['REQUEST_URI']=='/') require("default.php");
+else if($_SERVER['REQUEST_URI']=='/' || $_SERVER['REQUEST_URI']=='/?i=1') require("default.php");
 else  require("404.php");
  
      
