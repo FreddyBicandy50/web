@@ -8,13 +8,11 @@
           <span class="sr-only">Your Company</span>
           <img class="h-8 w-auto" src="https://avatars.githubusercontent.com/u/79138306?v=4" alt="">
         </a>
-           <h3  style="margin-left:20px;color:#7a7df3 " class=" font-bold tracking-tight text-gray-500 sm:text-3xl">
+           <div  >
           <?php 
-                if ($_SERVER["SERVER_NAME"]=="kali-wsl.tail4bb6a.ts.net") echo "Testing";
-                else if ($_SERVER["SERVER_NAME"]=="raspberrypi.tail4bb6a.ts.net") echo "Production Site";
-                else echo"Online Server";
+               require("dropdown.php");
           ?>
-        </h3>  
+        </div>  
       </div> 
     
     </nav>
@@ -34,7 +32,7 @@
       <div class="text-center">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"><?php 
         require("datewebsite/fetch_agent.php");
-        echo "Weclome ".$Device; 
+        echo $Device=="Windows NT 10.0"?"Welcome Windows":"Welcome ".$Device;  
         ?></h1> 
         <p class="mt-6 text-lg leading-8 text-gray-400"><i>Server main page use the buttons below to redirect you to a specified project Library</i>.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">

@@ -29,9 +29,9 @@
   transform-origin: top;
   transition: transform 0.3s ease;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: transparent;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 12px 10px 12px 0px rgba(0,0,0,0.2);
   z-index: 1;
   visibility: hidden;
   opacity: 0;
@@ -81,12 +81,19 @@ window.onclick = function(event) {
     </head>
 <body>
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <a onclick="myFunction()" style="margin-left:20px;color:#7a7df3 "  class=" font-bold tracking-tight text-gray-500 sm:text-3xl">
+   <?php
+   #continue 
+    if ($_SERVER['SERVER_NAME']=="kali-wsl.tail4bb6a.ts.net"){
+        echo "Testing";
+    }
+   ?>
+</a>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <a href="#"style="color:#f39595 "  class=" font-bold tracking-tight text-gray-500 sm:text-2xl">Production</a>
+    <a href="#" style="color:#95f3d0 "  class=" font-bold tracking-tight text-gray-500 sm:text-2xl">Testing</a>
   </div>
+
 </div>
 </body>
 </html>
