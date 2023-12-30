@@ -32,9 +32,9 @@
 <header class="bg-white shadow">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold tracking-tight text-gray-900"><?php 
-                        if ($_SERVER['REQUEST_URI']=="/filter") echo "Filter";
-                        else if ($_SERVER['REQUEST_URI']=="/about") echo "About";
-                        else echo "home";
+                        if ($_SERVER['REQUEST_URI']=="/bookstore/filter") echo "Filter";
+                        else if ($_SERVER['REQUEST_URI']=="/bookstore/about") echo "About";
+                        else echo "Library";
                          
             ?></h1>
     </div>
