@@ -81,19 +81,22 @@ window.onclick = function(event) {
     </head>
 <body>
 <div class="dropdown">
-  <a onclick="myFunction()" style="margin-left:20px;color:#7a7df3 "  class=" font-bold tracking-tight text-gray-500 sm:text-3xl">
+  <a href="" onclick="myFunction()" style="margin-left:20px;color:#7a7df3 "  class=" font-bold tracking-tight text-gray-500 sm:text-3xl">
    <?php
    #continue 
     if ($_SERVER['SERVER_NAME']=="kali-wsl.tail4bb6a.ts.net"){
-        echo "Testing";
-    }
+      print (
+        'Testing</a>
+        <div id="myDropdown" class="dropdown-content">
+        <a href="bookstore/controllers/"style="color:#f39595 "  class=" font-bold tracking-tight text-gray-500 sm:text-2xl">Production</a>
+        <a href="https://freddybicandy.42web.io/" style="color:#95f3d0 "  class=" font-bold tracking-tight text-gray-500 sm:text-2xl">Online</a>
+  </div>');
+} 
+    else if ($_SERVER['SERVER_NAME']=="raspberrypi.tail4bb6a.ts.net") echo "Production";
+    else echo "Online Server";
    ?>
-</a>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#"style="color:#f39595 "  class=" font-bold tracking-tight text-gray-500 sm:text-2xl">Production</a>
-    <a href="#" style="color:#95f3d0 "  class=" font-bold tracking-tight text-gray-500 sm:text-2xl">Testing</a>
-  </div>
 
+  
 </div>
 </body>
 </html>

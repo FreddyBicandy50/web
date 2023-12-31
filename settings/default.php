@@ -31,7 +31,7 @@
     </div>
       <div class="text-center">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"><?php 
-        require("datewebsite/fetch_agent.php");
+        require($function_date_website."fetch_agent.php");
         echo $Device=="Windows NT 10.0"?"Welcome Windows":"Welcome ".$Device;  
         ?></h1> 
         <p class="mt-6 text-lg leading-8 text-gray-400"><i>Server main page use the buttons below to redirect you to a specified project Library</i>.</p>
