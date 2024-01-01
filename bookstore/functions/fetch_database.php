@@ -1,6 +1,6 @@
 <?php
-require("partials/books_db.php"); 
-function display($book){
+require("bookstore/partials/books_db.php"); 
+function display($book){ 
     print
             ("
                 <td>
@@ -14,13 +14,14 @@ function display($book){
             ");
 }
 $counter=0;
-foreach($books as $book){
+
+while($book=mysqli_fetch_assoc($result)){
     if($counter==0) echo"<tr>";
-    if($_SERVER["REQUEST_URI"]=="/"){
+    if($_SERVER["REQUEST_URI"]=="/bookstore/"){
         display($book);
         $counter++;
     }
-    else if ($_SERVER["REQUEST_URI"] == "/filter")
+    else if ($_SERVER["REQUEST_URI"] == "/bookstore/filter")
         {
             if($book['Author']=="Robert Greene") 
             {
@@ -33,5 +34,5 @@ foreach($books as $book){
         echo "</tr>";
     }
 }
-    
+ 
 

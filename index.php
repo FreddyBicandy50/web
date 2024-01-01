@@ -1,8 +1,30 @@
-<?php 
-echo $_SERVER["REQUEST_URI"];
-if($_SERVER['REQUEST_URI']=="/filter") require("controllers/library.php");
-else if($_SERVER['REQUEST_URI']=="/about") require("controllers/library.php");
-else require("controllers/library.php");
+<?php
 
-?>
- 
+require("settings/env.php");
+
+
+#MAIN PAGE
+if ($_SERVER[$URI] == '/') require($Main_Page);
+
+#BookStore
+else if ($_SERVER[$URI] == $Route_bookstore_main)
+     #Library
+     require($Controller_BookStore."library.php");
+     else if ($_SERVER[$URI] == $Route_bookstore_filter)
+     #Filter
+     require($Controller_BookStore."filter.php");
+else if ($_SERVER[$URI] == $Route_bookstore_about)
+     #About
+     require($Controller_BookStore."about.php");
+
+
+#Date me Website
+else if ($_SERVER[$URI] == $Route_dateme_main)
+     #gowme
+     require($Controller_date_website."date.php");
+else if ($_SERVER[$URI] == $Route_dateme_yes)
+     #YES
+     require($Controller_date_website."yes.php");
+
+#Not Found 404!
+else require($Main_Page);
