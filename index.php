@@ -1,24 +1,29 @@
 <?php
 
+require("main/env/env.php");
 
-if($_SERVER['REQUEST_URI']=="/bookstore/") require("bookstore/controllers/library.php");
-else if($_SERVER['REQUEST_URI']=='/bookstore/filter') require("bookstore/controllers/filter.php");
-else if($_SERVER['REQUEST_URI']=='/bookstore/about') require("bookstore/controllers/about.php");
-else if($_SERVER['REQUEST_URI']=='/gowme'){
-       require("datewebsite/fetch_agent.php");
-      
-       if($Device=="Linux" ||  $Device=="iPhone"){
-            require("404.php");
-            
-        }else{
-             require("datewebsite/date.php"); 
-        }   
-      
-} 
-else if($_SERVER['REQUEST_URI']=='/SHESAIDYESS!') require("datewebsite/yes.html");
-else if($_SERVER['REQUEST_URI']=='/' || $_SERVER['REQUEST_URI']=='/?i=1') require("default.php");
-else  require("404.php");
- 
-     
-        
-?>
+#MAIN PAGE
+if ($_SERVER[$URI] == '/') require($Main_Page);
+
+#BookStore
+else if ($_SERVER[$URI] == $Route_bookstore_main)
+     #Library
+     require($Controller_BookStore."library.php");
+     else if ($_SERVER[$URI] == $Route_bookstore_filter)
+     #Filter
+     require($Controller_BookStore."filter.php");
+else if ($_SERVER[$URI] == $Route_bookstore_about)
+     #About
+     require($Controller_BookStore."about.php");
+
+
+#Date me Website
+else if ($_SERVER[$URI] == $Route_dateme_main)
+     #gowme
+     require($Controller_date_website."date.php");
+else if ($_SERVER[$URI] == $Route_dateme_yes)
+     #YES
+     require($Controller_date_website."yes.php");
+
+#Not Found 404!
+else include($NotFound_Page);

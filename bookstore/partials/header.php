@@ -21,8 +21,8 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                     <a href="/bookstore/" class="<?php echo $_SERVER['REQUEST_URI']=="/bookstore/"?"bg-gray-900 text-white rounded-md px-3":"text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"?> py-2 text-sm font-medium" aria-current="page">Library</a>
-                    <a href="/bookstore/filter.php" class="<?php echo $_SERVER['REQUEST_URI']=="/bookstore/filter"?"bg-gray-900 text-white rounded-md px-3":"text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"?> py-2 text-sm font-medium">Filter</a>
-                    <a href="/bookstore/about.php" class="<?php echo $_SERVER['REQUEST_URI']=="/bookstore/about"?"bg-gray-900 text-white rounded-md px-3":"text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"?> py-2 text-sm font-medium">About</a>
+                    <a href="/bookstore/filter" class="<?php echo $_SERVER['REQUEST_URI']=="/bookstore/filter"?"bg-gray-900 text-white rounded-md px-3":"text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"?> py-2 text-sm font-medium">Filter</a>
+                    <a href="/bookstore/about" class="<?php echo $_SERVER['REQUEST_URI']=="/bookstore/about"?"bg-gray-900 text-white rounded-md px-3":"text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"?> py-2 text-sm font-medium">About</a>
                     </div>
                 </div>
                 </div>
