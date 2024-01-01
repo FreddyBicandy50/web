@@ -5,15 +5,16 @@ $URI = 'REQUEST_URI';
 $user = $_SERVER["HTTP_USER_AGENT"];
 
 #Encapsulation 
-$Main_Page = "settings/default.php";
-$Menu_Dropdown = "settings/dropdown.php";
-$NotFound_Page = "settings/404.php";
+$Main_Page = "main/pages/main.php";
+$Menu_Dropdown = "main/partials/dropdown.php";
+$NotFound_Page = "main/pages/404.php";
 
 #LINKS
-$LOGO = "https://avatars.githubusercontent.com/u/79138306?v=4";
+$LOGO_lightTheme = "https://raw.githubusercontent.com/FreddyBicandy50/web/features/main/img/light_theme.png";
+$LOGO_Profile = "https://avatars.githubusercontent.com/u/79138306?v=4";
 $CSS_Tailwind = "https://cdn.tailwindcss.com";
-$SERVER_Testing = "http://kali-wsl.tail4bb6a.ts.net/";
-$SERVER_Production = "http://raspberrypi.tail4bb6a.ts.net/";
+$SERVER_Testing = "kali-wsl.tail4bb6a.ts.net";
+$SERVER_Production = "http://raspberrypi.tail4bb6a.ts.net";
 $SERVER_Online = "https://freddybicandy.42web.io/";
 
 #Projects

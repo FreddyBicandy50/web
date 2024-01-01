@@ -1,7 +1,6 @@
 <?php
 
-require("settings/env.php");
-
+require("main/env/env.php");
 
 #MAIN PAGE
 if ($_SERVER[$URI] == '/') require($Main_Page);
@@ -27,4 +26,4 @@ else if ($_SERVER[$URI] == $Route_dateme_yes)
      require($Controller_date_website."yes.php");
 
 #Not Found 404!
-else require($Main_Page);
+else include($NotFound_Page);
