@@ -15,6 +15,7 @@
           <!-- Dropdown Menu -->
           <div><?php require($Menu_Dropdown); ?></div>
         </div>
+        <img src="main/img/light_theme.png"/>
       </nav>
     </header>
 </head>
@@ -31,7 +32,7 @@
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
       </div>
- 
+
       <!-- Code -->
       <div class="text-center">
         <!-- Welcome message -->
