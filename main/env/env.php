@@ -14,7 +14,7 @@ $LOGO_lightTheme = "https://raw.githubusercontent.com/FreddyBicandy50/web/featur
 $LOGO_Profile = "https://avatars.githubusercontent.com/u/79138306?v=4";
 $CSS_Tailwind = "https://cdn.tailwindcss.com";
 $SERVER_Testing = "kali-wsl.tail4bb6a.ts.net";
-$SERVER_Production = "http://raspberrypi.tail4bb6a.ts.net";
+$SERVER_Production = "raspberrypi.tail4bb6a.ts.net";
 $SERVER_Online = "https://freddybicandy.42web.io/";
 
 #Projects
