@@ -26,6 +26,4 @@ else if ($_SERVER[$URI] == $Route_dateme_yes)
      require($Controller_date_website."yes.php");
 
 #Not Found 404!
-else { 
-     include($NotFound_Page);
-}
+else include($NotFound_Page);

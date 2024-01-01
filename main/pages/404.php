@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_URI'] == '/gowme') $load_message = "Use your LAPTOP!❤️";
-else $load_message = "Oops URI Not Found!";?>
+else $load_message = "Oops URI Not Found!"; ?>
 
 <head>
     <title>404!</title>
@@ -57,4 +57,5 @@ else $load_message = "Oops URI Not Found!";?>
     </div>
     </div>
 </body>
+
 </html>
