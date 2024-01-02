@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Main Page</title>
+  <title> Main Page</title>
+    <link rel="icon" type="images/x-icon" href="https://www.w3docs.com/favicon.ico" />
 
   <!-- Tailwind css -->
   <script src=<?= $CSS_Tailwind ?>></script>
