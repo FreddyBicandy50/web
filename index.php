@@ -17,7 +17,6 @@ else if ($_SERVER[$URI] == $Route_bookstore_about)
      #About
      require($Controller_BookStore."about.php");
 
-
 #Date me Website
 else if ($_SERVER[$URI] == $Route_dateme_main)
      #gowme

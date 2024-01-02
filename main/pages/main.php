@@ -10,7 +10,7 @@
   <script src=<?= $CSS_Tailwind ?>></script>
   <div>
     <!-- navbar -->
-    <header class="absolute inset-x-0 top-0 z-50">
+    <header onload="defaultstyle()" class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <!-- Logo -->
@@ -19,12 +19,11 @@
           <div><?php require($Menu_Dropdown); ?></div>
           
         </div>
-        <button id="theme" onclick="changeTheme()"><img class="h-8 w-auto" src=<?= $LOGO_lightTheme . " alt='Theme Icon'" ?>></button>
+        <button onclick="changeTheme()"><img class="h-8 w-auto" src=<?= $LOGO_lightTheme . " alt='Theme Icon'" ?>></button>
         <script>
           <?= include("main/js/theme.js"); ?>
           </script>
-
-        <h6 id="themeButton" class="font-bold tracking-tight">Change Theme</h6>
+        <h6 id="theme_text" class="font-bold tracking-tight">Change Theme</h6>
 
       </nav>
     </header>
@@ -44,7 +43,7 @@
       <!-- Code -->
       <div class="text-center">
         <!-- Welcome message -->
-        <h1 id="Title" class="text-4xl font-bold tracking-tight sm:text-6xl">
+        <h1 id="main_title" class="text-4xl font-bold tracking-tight sm:text-6xl">
           <?php
             require($function_date_website . "fetch_agent.php");
             echo $Device == "Windows NT 10.0" ? "Welcome Windows" : "Welcome " . $Device;
