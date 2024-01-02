@@ -12,7 +12,7 @@
       print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
          localhost
-         </p>");
+         </p></a>");
       print("
          <p class='font-bold tracking-tight sm:text-5xl' style='color:#1d2033; margin-top: -45px; margin-left:150px;width:3%'>→</p>
          <a href='/console'>
@@ -33,7 +33,7 @@
       print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
          Public_hosting
-         </p>");
+         </p></a>");
       print("
          <p class='font-bold tracking-tight sm:text-5xl' style='color:#1d2033; margin-top: -45px; margin-left:220px;width:3%'>→</p>
          <a href='/console'>
@@ -53,7 +53,7 @@
        print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
          Web_hosting
-         </p>");
+         </p></a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
               <a href='http://$SERVER_Production' style='color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Public_hosting</a>

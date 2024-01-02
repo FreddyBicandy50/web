@@ -13,7 +13,7 @@ else $load_message = "Oops URI Not Found!"; ?>
             <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <!-- Logo -->
-                    <a href="/" class="-m-1.5 p-1.5"> <img class="h-8 w-auto" src=<?= $LOGO . "alt='Site Logo'" ?>> </a>
+                    <a href="/" class="-m-1.5 p-1.5"> <img class="h-8 w-auto" src=<?= $LOGO_Profile . "alt='Site Logo'" ?>> </a>
                     <!-- Dropdown Menu -->
                     <div><?php require($Menu_Dropdown); ?></div>
                 </div>
