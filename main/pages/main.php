@@ -4,7 +4,7 @@
 <style><?= include 'main/css/style.css'?></style>
 
   <title> Main Page</title>
-    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="https://raw.githubusercontent.com/FreddyBicandy50/web/main/main/img/icon.png" />
+    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="" />
 
   <!-- Tailwind css -->
   <script src=<?= $CSS_Tailwind ?>></script>
