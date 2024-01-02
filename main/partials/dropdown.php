@@ -30,7 +30,7 @@
       print('Web Hosting</a>');
       print(
         "<div id='myDropdown' class='dropdown-content'>
-              <a href='http://$Server_Production' style='color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>VPN Host</a>
+              <a href='http://$SERVER_Production' style='color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>VPN Host</a>
               <a href='http://$SERVER_Testing' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>localhost</a>
         </div>");
     }
