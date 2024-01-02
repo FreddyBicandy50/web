@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style><?= include 'main/css/style.css'?></style>
+
   <title> Main Page</title>
-    <link rel="icon" type="images/x-icon" href="https://w7.pngwing.com/pngs/293/485/png-transparent-tailwind-css-hd-logo.png" />
+    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="  " />
 
   <!-- Tailwind css -->
   <script src=<?= $CSS_Tailwind ?>></script>

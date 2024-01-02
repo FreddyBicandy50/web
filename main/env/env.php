@@ -12,6 +12,7 @@ $NotFound_Page = "main/pages/404.php";
 
 #LINKS
 $LOGO_lightTheme = "https://raw.githubusercontent.com/FreddyBicandy50/web/features/main/img/light_theme.png";
+$LOGO_web = "https://github.com/FreddyBicandy50/web/blob/main/main/img/icon.png";
 $LOGO_Profile = "https://avatars.githubusercontent.com/u/79138306?v=4";
 $CSS_Tailwind = "https://cdn.tailwindcss.com";
 $SERVER_Testing = "kali-wsl.tail4bb6a.ts.net";
