@@ -5,7 +5,7 @@
 
   <title> Main Page</title>
     <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $LOGO_web?>" />
-
+<!-- test -->
   <!-- Tailwind css -->
   <script src=<?= $CSS_Tailwind ?>></script>
   <div>
