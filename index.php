@@ -4,7 +4,8 @@ require("main/env/env.php");
 
 #MAIN PAGE
 if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '?i=1') require($Main_Page);
-
+#Webconsole
+else if ($_SERVER[$URI] == '/console') require("webconsole/webconsole.php");
 #BookStore
 else if ($_SERVER[$URI] == $Route_bookstore_main)
      #Library

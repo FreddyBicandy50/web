@@ -11,25 +11,26 @@
   <div>
     <!-- navbar -->
     <header class="absolute inset-x-0 top-0 z-50">
-      <nav class="flex items-center justify-between p-5 lg:px-8" aria-label="Global">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <!-- Logo -->
           <a href="/" class="-m-1.5 p-1.5"> <img class="h-8 w-auto" src=<?= $LOGO_Profile . "alt='Site Logo'" ?>> </a>
           <!-- Dropdown Menu -->
           <div><?php require($Menu_Dropdown); ?></div>
+          
         </div>
+        <button id="theme" onclick="changeTheme()"><img class="h-8 w-auto" src=<?= $LOGO_lightTheme . " alt='Theme Icon'" ?>></button>
         <script>
-          <?php include("main/js/theme.js"); ?>
-        </script>
+          <?= include("main/js/theme.js"); ?>
+          </script>
 
         <h6 id="themeButton" class="font-bold tracking-tight">Change Theme</h6>
 
-        <button id="theme" onclick="changeTheme()"><img class="h-8 w-auto" src=<?= $LOGO_lightTheme . " alt='Theme Icon'" ?>></button>
       </nav>
     </header>
 </head>
 
-<body>
+<body onload="defaultstyle()">
   <!-- Styling -->
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -45,8 +46,8 @@
         <!-- Welcome message -->
         <h1 id="Title" class="text-4xl font-bold tracking-tight sm:text-6xl">
           <?php
-          require($function_date_website . "fetch_agent.php");
-          echo $Device == "Windows NT 10.0" ? "Welcome Windows" : "Welcome " . $Device;
+            require($function_date_website . "fetch_agent.php");
+            echo $Device == "Windows NT 10.0" ? "Welcome Windows" : "Welcome " . $Device;
           ?>
         </h1>
         <!-- Description -->
