@@ -1,10 +1,6 @@
 <!-- INCLUDE -->
-<style>
-  <?= include 'main/css/style.css'; ?>
-</style>
-<script>
-  <?= include 'main/js/dropdown.js'; ?>
-</script>
+<style><?= include 'main/css/style.css'?></style>
+<script><?= include 'main/js/dropdown.js'?></script>
 
 <!-- DROPDOWN -->
 <div class="dropdown">

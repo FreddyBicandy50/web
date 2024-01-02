@@ -2,7 +2,7 @@
 <html>
 <head>
   <title> Main Page</title>
-    <link rel="icon" type="images/x-icon" href="https://www.w3docs.com/favicon.ico" />
+    <link rel="icon" type="images/x-icon" href="https://w7.pngwing.com/pngs/293/485/png-transparent-tailwind-css-hd-logo.png" />
 
   <!-- Tailwind css -->
   <script src=<?= $CSS_Tailwind ?>></script>
