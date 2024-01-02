@@ -4,7 +4,7 @@
 <style><?= include 'main/css/style.css'?></style>
 
   <title> Main Page</title>
-    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="https://image.pngaaa.com/388/3920388-middle.png" />
+    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $LOGO_web?>" />
 
   <!-- Tailwind css -->
   <script src=<?= $CSS_Tailwind ?>></script>
