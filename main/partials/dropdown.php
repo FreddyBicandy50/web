@@ -35,11 +35,11 @@
          Public_hosting
          </p>");
       print("
-         <p class='font-bold tracking-tight sm:text-5xl' style='color:#1d2033; margin-top: -45px; margin-left:150px;width:3%'>→</p>
+         <p class='font-bold tracking-tight sm:text-5xl' style='color:#1d2033; margin-top: -45px; margin-left:220px;width:3%'>→</p>
          <a href='/console'>
-         <img style='margin-top: -35px; margin-left:200px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
-          <p class='font-bold tracking-tight text-gray-500 sm:text-1xl' style='color:#1d2033; margin-top: -29px; margin-left:231px;width:3%'>(<i>console</i>)</p>         
-         </a> 
+         <img style='margin-top: -35px; margin-left:265px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
+          <p class='font-bold tracking-tight text-gray-500 sm:text-1xl' style='color:#1d2033; margin-top: -29px; margin-left:300px;width:3%'>(<i>console</i>)</p>         
+         </a>
       </a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
