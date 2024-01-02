@@ -3,7 +3,7 @@
 require("main/env/env.php");
 
 #MAIN PAGE
-if ($_SERVER[$URI] == '/') require($Main_Page);
+if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '?i=1') require($Main_Page);
 
 #BookStore
 else if ($_SERVER[$URI] == $Route_bookstore_main)

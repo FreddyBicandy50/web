@@ -1,4 +1,5 @@
 <?php
+
 #Variables
 $Name = 'SERVER_NAME';
 $URI = 'REQUEST_URI';
