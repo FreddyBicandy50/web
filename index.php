@@ -2,6 +2,8 @@
 require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
+require("main/functions/fetch_user.php");
+
 #MAIN PAGE
 if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
 
@@ -41,3 +43,4 @@ else if ($_SERVER[$URI] == $route_dateme_yes)
 
 #Not Found 404!
 else include($notfound_page);
+echo $_SESSION['username'];
