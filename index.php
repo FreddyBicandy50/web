@@ -1,5 +1,4 @@
 <?php
-//any
 require("main/env/env.php");
 
 #MAIN PAGE
