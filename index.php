@@ -1,5 +1,4 @@
 <?php
-echo "Features deleted";
 require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
