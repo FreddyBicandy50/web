@@ -3,32 +3,29 @@
 <head>
 <style><?= include 'main/css/style.css'?></style>
  <title> Main Page</title>
-    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $LOGO_web?>" />
+    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web?>" />
 <!-- test -->
   <!-- Tailwind css -->
-  <script src=<?= $CSS_Tailwind ?>></script>
+  <script src=<?= $css_tailwind ?>></script>
   <div>
     <!-- navbar -->
-    <header onload="defaultstyle()" class="absolute inset-x-0 top-0 z-50">
+    <header onload="default_style()" class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <!-- Logo -->
-          <a href="/" class="-m-1.5 p-1.5"> <img class="h-8 w-auto" src=<?= $LOGO_Profile . "alt='Site Logo'" ?>> </a>
+          <a href="/" class="-m-1.5 p-1.5"> <img class="h-8 w-auto" src=<?= $logo_profile . "alt='Site Logo'" ?>> </a>
           <!-- Dropdown Menu -->
-          <div><?php require($Menu_Dropdown); ?></div>
+          <div><?php require($menu_dropdown); ?></div>
           
         </div>
-        <button onclick="changeTheme()"><img class="h-8 w-auto" src=<?= $LOGO_lightTheme . " alt='Theme Icon'" ?>></button>
-        <script>
-          <?= include("main/js/theme.js"); ?>
-          </script>
-        <h6 id="theme_text" class="font-bold tracking-tight">Change Theme</h6>
-
+        <button onclick="change_theme()"><img class="h-8 w-auto" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
+        <script> <?= include("main/js/theme.js"); ?> </script>
+        <h6 id="theme_text" class="font-bold tracking-tight">Change Theme</h6> 
       </nav>
     </header>
 </head>
 
-<body onload="defaultstyle()">
+<body onload="default_style()">
   <!-- Styling -->
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -37,16 +34,12 @@
     </div>
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-      </div>
-
+      </div> 
       <!-- Code -->
       <div class="text-center">
         <!-- Welcome message -->
         <h1 id="main_title" class="text-4xl font-bold tracking-tight sm:text-6xl">
-          <?php
-            require($function_date_website . "fetch_agent.php");
-            echo $Device == "Windows NT 10.0" ? "Welcome Windows" : "Welcome " . $Device;
-          ?>
+        <?php echo $Device == "Windows NT 10.0" ? "Welcome Windows" : "Welcome " . $Device; ?>
         </h1>
         <!-- Description -->
         <p class="mt-6 text-lg leading-8 text-gray-400">
@@ -63,6 +56,5 @@
     </div>
   </div>
   </div>
-</body>
-
+</body> 
 </html>

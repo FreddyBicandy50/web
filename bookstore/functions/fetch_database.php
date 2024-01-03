@@ -1,8 +1,8 @@
 <?php
-require("bookstore/partials/books_db.php"); 
-function display($book){ 
-    print
-            ("
+require("bookstore/partials/books_db.php");
+function display($book)
+{
+    print("
                 <td>
                     <a href={$book['Link']} target='_blank'>
                         <img src='{$book['Image']}' alt='image book for={$book['Name']}' width='250' height='300'>
@@ -13,26 +13,21 @@ function display($book){
             </td>
             ");
 }
-$counter=0;
+$counter = 0;
 
-while($book=mysqli_fetch_assoc($result)){
-    if($counter==0) echo"<tr>";
-    if($_SERVER["REQUEST_URI"]=="/bookstore/"){
+while ($book = mysqli_fetch_assoc($result)) {
+    if ($counter == 0) echo "<tr>";
+    if ($_SERVER["REQUEST_URI"] == "/bookstore/") {
         display($book);
         $counter++;
-    }
-    else if ($_SERVER["REQUEST_URI"] == "/bookstore/filter")
-        {
-            if($book['Author']=="Robert Greene") 
-            {
-                display($book);
-                $counter++;
-            }
+    } else if ($_SERVER["REQUEST_URI"] == "/bookstore/filter") {
+        if ($book['Author'] == "Robert Greene") {
+            display($book);
+            $counter++;
         }
-    if($counter==3) {
-        $counter=0;
+    }
+    if ($counter == 3) {
+        $counter = 0;
         echo "</tr>";
     }
 }
- 
-

@@ -1,11 +1,11 @@
 let dark = true;
-function defaultstyle (){
+function default_style() {
   document.body.style.backgroundColor = "#E2E8F0";
   document.getElementById("main_title").style.color = "#1E293B";
   document.getElementById("theme_text").style.color = "#1E293B";
   document.getElementById("console").style.color = "#1E293B";
 }
-function changeTheme() {
+function change_theme() {
   if (dark) {
     dark = false;
     document.body.style.backgroundColor = "#1f2937";

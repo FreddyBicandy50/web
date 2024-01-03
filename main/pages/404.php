@@ -1,28 +1,20 @@
 <?php
-if ($_SERVER['REQUEST_URI'] == '/gowme') $load_message = "Use your LAPTOP!❤️";
-else $load_message = "Oops URI Not Found!"; ?>
+if ($_SERVER[$URI] == $route_dateme_main){
+    echo "true";
+    $load_message = "Use your LAPTOP!❤️";
+}
+else
+    $load_message = "Oops page Not Found!"; ?>
 
 <head>
     <title>404!</title>
     <!-- Tailwind css -->
-    <script src=<?= $CSS_Tailwind ?>></script>
+    <script src=<?= $css_tailwind ?>></script>
+    <script>
+        <?= include("main/js/theme.js"); ?>
+    </script>
 
-    <div>
-        <!-- navbar -->
-        <header class="absolute inset-x-0 top-0 z-50">
-            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div class="flex lg:flex-1">
-                    <!-- Logo -->
-                    <a href="/" class="-m-1.5 p-1.5"> <img class="h-8 w-auto" src=<?= $LOGO_Profile . "alt='Site Logo'" ?>> </a>
-                    <!-- Dropdown Menu -->
-                    <div><?php require($Menu_Dropdown); ?></div>
-                </div>
-            </nav>
-        </header>
-</head>
-
-
-<body bgcolor="#1f2937">
+<body onload="change_theme()">
     <!-- Styling -->
     <div class="relative isolate px-6 pt-14 lg:px-8">
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -39,20 +31,17 @@ else $load_message = "Oops URI Not Found!"; ?>
                 <!-- Welcome message -->
                 <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl">
                     <?php
-                    require($function_date_website . "fetch_agent.php");
-                    echo  "404!<br>" . $load_message;
+                    require("main/functions/fetch_agent.php");
+                    echo "404!<br>" . $load_message;
                     ?>
                 </h1>
                 <!-- quote -->
-
                 <a href="/">
                     <p class="mt-6 text-lg leading-8 " style="color: #7a7df1;">
                         <i><b>Home Page</b></i>
                     </p>
                 </a>
             </div>
-        </div>
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
         </div>
     </div>
     </div>

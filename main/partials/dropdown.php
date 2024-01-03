@@ -1,7 +1,7 @@
 <!-- INCLUDE -->
 <style><?= include 'main/css/style.css'?></style>
 <script>
-          <?= include("main/js/theme.js"); ?>
+      <?= include("main/js/theme.js"); ?>
 </script>
 <!-- DROPDOWN -->
 <div class="dropdown">
@@ -9,7 +9,7 @@
   <a href="" >
 <?php
     #localhost
-    if ($_SERVER[$Name] == $SERVER_Testing) {
+    if ($_SERVER[$name] == $server_local) {
       print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
          localhost
@@ -24,14 +24,14 @@
       </a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
-              <a href='http://$SERVER_Production' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Private Site</a>
-              <a href='$SERVER_Online' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Website</a>
+              <a href='http://$server_private' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Private Site</a>
+              <a href='$server_public' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Website</a>
         </div>");
      
      
     }
     #Public Hosting
-    else if ($_SERVER[$Name] == $SERVER_Production) {
+    else if ($_SERVER[$name] == $server_private) {
        print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
          Private Site
@@ -46,8 +46,8 @@
       </a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
-              <a href='http://$SERVER_Testing' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>localhost</a>
-              <a href='$SERVER_Online' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Website</a>
+              <a href='http://$server_local' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>localhost</a>
+              <a href='$server_public' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Website</a>
         </div>");
      
     }
@@ -59,8 +59,8 @@
          </p></a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
-              <a href='http://$SERVER_Production'style=color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Private site</a>
-              <a href='http://$SERVER_Testing' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>localhost</a>
+              <a href='http://$server_private'style=color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Private site</a>
+              <a href='http://$server_local' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>localhost</a>
         </div>");
     }
     ?>

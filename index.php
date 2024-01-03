@@ -1,28 +1,44 @@
 <?php
-require("main/env/env.php");
 
+require("main/env/env.php");
+require("main/functions/fetch_agent.php");
+require("main/functions/fetch_URI.php");
 #MAIN PAGE
-if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($Main_Page);
+if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
+
+
 #Webconsole
-else if ($_SERVER[$URI] == '/console') require("webconsole/webconsole.php");
+else if ($_SERVER[$URI] == $route_webconsole) require("webconsole/webconsole.php");
+
+
+
 #BookStore
-else if ($_SERVER[$URI] == $Route_bookstore_main)
+else if ($_SERVER[$URI] == $route_bookstore_main)
      #Library
-     require($Controller_BookStore."library.php");
-     else if ($_SERVER[$URI] == $Route_bookstore_filter)
+     require("bookstore/controllers/library.php");
+
+else if ($_SERVER[$URI] == $route_bookstore_filter)
      #Filter
-     require($Controller_BookStore."filter.php");
-else if ($_SERVER[$URI] == $Route_bookstore_about)
+     require("bookstore/controllers/filter.php");
+else if ($_SERVER[$URI] == $route_bookstore_about)
      #About
-     require($Controller_BookStore."about.php");
+     require("bookstore/controllers/about.php");
+
+
+
 
 #Date me Website
-else if ($_SERVER[$URI] == $Route_dateme_main)
+else if ($_SERVER[$URI] == $route_dateme_main)
      #gowme
-     require($Controller_date_website."date.php");
-else if ($_SERVER[$URI] == $Route_dateme_yes)
+     require("datewebsite/controllers/date.php");
+else if ($_SERVER[$URI] == $route_dateme_yes)
      #YES
-     require($Controller_date_website."yes.php");
+     require("datewebsite/controllers/yes.php");
+
+
+
+
+
 
 #Not Found 404!
-else include($NotFound_Page);
+else include($notfound_page);
