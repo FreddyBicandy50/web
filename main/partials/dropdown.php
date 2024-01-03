@@ -1,10 +1,12 @@
 <!-- INCLUDE -->
 <style><?= include 'main/css/style.css'?></style>
-
+<script>
+          <?= include("main/js/theme.js"); ?>
+</script>
 <!-- DROPDOWN -->
 <div class="dropdown">
   
-  <a href="">
+  <a href="" >
 <?php
     #localhost
     if ($_SERVER[$Name] == $SERVER_Testing) {
@@ -36,8 +38,8 @@
          </p></a>");
       print("
          <a href='/console'>
-         <img style='margin-top: -3%; margin-left:150px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
-          <p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:19%;width:3%'>
+         <img style='margin-top: -3%; margin-left:180px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
+          <p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:210px;width:3%'>
             (<i>console</i>)
           </p>         
          </a> 
