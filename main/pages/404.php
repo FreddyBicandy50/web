@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER[$URI] == $route_dateme_main){
-    echo "true";
     $load_message = "Use your LAPTOP!❤️";
 }
 else

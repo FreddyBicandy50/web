@@ -2,6 +2,7 @@
 
 session_start();    
 $_SESSION['username']=session_id();
+$_SESSION['device']=$Device;
 $users=[
                 
             't0debrj8aat4951quilj30bfb5',
@@ -25,3 +26,4 @@ foreach ($users as $user){
         break;
     }
 }
+

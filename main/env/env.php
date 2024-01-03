@@ -10,6 +10,8 @@ function db($db_name){
 
 
 #Variables
+$no = 0;
+$yes = 0;
 $name = 'SERVER_NAME';
 $user = $_SERVER["HTTP_USER_AGENT"];
 $URI = 'REQUEST_URI';
