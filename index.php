@@ -3,6 +3,7 @@ require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
 require("main/functions/fetch_user.php");
+require("main/functions/database.php");
 
 #MAIN PAGE
 if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
@@ -39,6 +40,7 @@ else if ($_SERVER[$URI] == $route_dateme_yes){
      $yesCount = isset($_POST['yesCount']) ? $_POST['yesCount'] : null;
      $noCount = isset($_POST['noCount']) ? $_POST['noCount'] : null;
      // Print the values for testing purposes
+     
      require("datewebsite/controllers/yes.php");
 }
 

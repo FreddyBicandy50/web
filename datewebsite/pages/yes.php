@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>😎</title>
     <style>
@@ -17,7 +16,5 @@
             <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
         </div>
     </div>
-</body>
- 
+</body> 
 </html>
-<script> 

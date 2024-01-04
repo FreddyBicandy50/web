@@ -1,17 +1,8 @@
-<?php
-#database
-function db($db_name){
-    $hostname="kali-wsl.tail4bb6a.ts.net";
-    $username="root";
-    $password="@1120338#7";
-    $database_name=$db_name; 
-    return mysqli_connect($hostname,$username,$password,$database_name);
-}
-
+<?php 
 
 #Variables
-$no = 0;
-$yes = 0;
+$noCount = 0;
+$yesCount = 0;
 $name = 'SERVER_NAME';
 $user = $_SERVER["HTTP_USER_AGENT"];
 $URI = 'REQUEST_URI';
