@@ -6,8 +6,8 @@ function db($db_name,$testing)
     # Check if the server host or referer matches specific values
     if ($testing) {
         # Connection details for local environment
-        $hostname = "kali-wsl.tail4bb6a.ts.net";
-        $username = "root";
+        $hostname = "raspberrypi.tail4bb6a.ts.net";
+        $username = "null";
         $password = "@1120338#7";
         $database_name = $db_name;
         $port = '3306';
