@@ -27,7 +27,7 @@ if (!$connect) {
     mysqli_query(
         $connect,
         "INSERT INTO dateme (Session_id, Device_name, yes, no_avoid, date_entry, time_entry)
-        VALUES ('$id', '$Device', $noCount, $yesCount, '$getdate', '$time');"
+        VALUES ('$id', '$Device', $yesCount, $noCount, '$getdate', '$time');"
     );
 
 }
