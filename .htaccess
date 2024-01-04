@@ -1,5 +1,6 @@
 
 <IfModule mod_rewrite.c>
+    php_value date.timezone 'Asia/Beirut'
     RewriteEngine On
     #RewriteCond %{HTTPS}% !=on
     #RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
