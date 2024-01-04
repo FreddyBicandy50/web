@@ -1,51 +1,42 @@
 <?php
+# Include necessary files
 require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
-require("main/functions/fetch_user.php");
 require("main/functions/database.php");
 
-#MAIN PAGE
+# MAIN PAGE
+# Check if the URI is the root or has a specific parameter
 if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
 
-
-#Webconsole
+# Webconsole
 else if ($_SERVER[$URI] == $route_webconsole) require("webconsole/webconsole.php");
 
-
-
-#BookStore
+# BookStore
 else if ($_SERVER[$URI] == $route_bookstore_main)
-     #Library
+     # Library
      require("bookstore/controllers/library.php");
 
 else if ($_SERVER[$URI] == $route_bookstore_filter)
-     #Filter
+     # Filter
      require("bookstore/controllers/filter.php");
 else if ($_SERVER[$URI] == $route_bookstore_about)
-     #About
+     # About
      require("bookstore/controllers/about.php");
 
-
-
-
-#Date me Website
+# Date me Website
 else if ($_SERVER[$URI] == $route_dateme_main)
-     #gowme
+     # gowme
      require("datewebsite/controllers/date.php");
 
-
-else if ($_SERVER[$URI] == $route_dateme_yes){
-     #YES
+else if ($_SERVER[$URI] == $route_dateme_yes) {
+     # YES
      $yesCount = isset($_POST['yesCount']) ? $_POST['yesCount'] : null;
      $noCount = isset($_POST['noCount']) ? $_POST['noCount'] : null;
      // Print the values for testing purposes
-     
+
      require("datewebsite/controllers/yes.php");
 }
 
-
-
-
-#Not Found 404!
+# Not Found 404!
 else include($notfound_page);
