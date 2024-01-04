@@ -34,11 +34,16 @@ else if ($_SERVER[$URI] == $route_bookstore_about)
 else if ($_SERVER[$URI] == $route_dateme_main)
      #gowme
      require("datewebsite/controllers/date.php");
-else if ($_SERVER[$URI] == $route_dateme_yes)
+
+
+else if ($_SERVER[$URI] == $route_dateme_yes){
      #YES
-     require("datewebsite/functions/your_php_file.php");
-
-
+     $yesCount = isset($_POST['yesCount']) ? $_POST['yesCount'] : null;
+     $noCount = isset($_POST['noCount']) ? $_POST['noCount'] : null;
+     // Print the values for testing purposes
+     echo "Yes Count: $yesCount, No Count: $noCount";
+     require("datewebsite/controllers/yes.php");
+}
 
 
 
