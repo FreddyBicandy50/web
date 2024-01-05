@@ -6,7 +6,9 @@
   <style>
     <?= include 'main/css/style.css' ?>
   </style>
-  <!-- Title and Favicon -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <!-- Title and Favi`con` -->
   <title>Main Page</title>
   <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
 
@@ -18,17 +20,19 @@
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <!-- Logo -->
-          <a href="/" class="-m-1.5 p-1.5"> <img class="h-8 w-auto" src=<?= $logo_profile . "alt='Site Logo'" ?>> </a>
+          <a href="/" class="-m-1.5 p-1.5"> <img class="<?php if($Device=='iPhone' || $Device=='Linux') echo 'h-15 w-20';else echo'h-auto w-14'?>" src=<?= $logo_profile . "alt='Site Logo'" ?>> </a>
           <!-- Dropdown Menu -->
           <div><?php require($menu_dropdown); ?></div>
 
         </div>
         <!-- Theme Switch Button -->
-        <button onclick="change_theme()"><img class="h-8 w-auto" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
+        <button onclick="change_theme()"><img class="<?php if($Device=='iPhone' || $Device=='Linux') echo 'h-auto w-8';else echo'h-8 w-auto'?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
+
         <script>
           <?= include("main/js/theme.js"); ?>
         </script>
-        <h6 id="theme_text" class="font-bold tracking-tight">Change Theme</h6>
+        <?php if($Device=='iPhone' || $Device=='Linux') echo '<h6 id="theme_text" class="font-bold tracking-tight"></h6>';else echo'<h6 id="theme_text" class="font-bold tracking-tight">Change Theme</h6>'?>
+        
       </nav>
     </header>
 </head>
