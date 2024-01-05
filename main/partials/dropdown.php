@@ -54,27 +54,26 @@
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
          Private Site
          </p></a>");
-      #other options   
-       print("
+      #other options
+      print("
          <a href='/console'>");
       if ($Device == 'iPhone' || $Device == 'Linux') {
         echo '';
       } else {
         print("
-              <img style='margin-top: -3%; margin-left:150px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
+              <img style='margin-top: -3%; margin-left:180px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
                 ");
       }
-      print("
-        <p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:210px;width:3%'>
-            (<i>console</i>)
-          </p>         
-         </a> 
-      </a>");
+      print("<p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:22%;width:3%'>
+                  (<i>console</i>)
+                </p>         
+              </a> 
+            </a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
-              <a href='http://$server_local' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>localhost</a>
-              <a href='$server_public' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Website</a>
-        </div>");
+                    <a href='http://$server_local' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>localhost</a>
+                    <a href='$server_public' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Website</a>
+              </div>");
     }
 
 
