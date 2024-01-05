@@ -55,10 +55,17 @@
          Private Site
          </p></a>");
       #other options   
+       print("
+         <a href='/console'>");
+      if ($Device == 'iPhone' || $Device == 'Linux') {
+        echo '';
+      } else {
+        print("
+              <img style='margin-top: -3%; margin-left:150px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
+                ");
+      }
       print("
-         <a href='/console'>
-         <img style='margin-top: -3%; margin-left:180px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
-          <p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:210px;width:3%'>
+        <p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:210px;width:3%'>
             (<i>console</i>)
           </p>         
          </a> 
