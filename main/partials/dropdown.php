@@ -27,21 +27,20 @@
       #other options
       print("
          <a href='/console'>");
-      if($Device=='iPhone' || $Device=='Linux') {
-        echo'';
-      }else{
-      print("
+      if ($Device == 'iPhone' || $Device == 'Linux') {
+        echo '';
+      } else {
+        print("
               <img style='margin-top: -3%; margin-left:150px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
                 ");
-               
       }
-         print("<p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:19%;width:3%'>
+      print("<p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:19%;width:3%'>
                   (<i>console</i>)
                 </p>         
               </a> 
             </a>");
-            print(
-              "<div id='myDropdown' class='dropdown-content'>
+      print(
+        "<div id='myDropdown' class='dropdown-content'>
                     <a href='http://$server_private' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Private Site</a>
                     <a href='$server_public' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>Website</a>
               </div>");

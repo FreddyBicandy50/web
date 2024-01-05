@@ -1,4 +1,4 @@
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php
 # Check if the current URI matches the specified route for the Date Me main page
