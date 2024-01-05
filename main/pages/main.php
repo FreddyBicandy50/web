@@ -20,7 +20,7 @@
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <!-- Logo -->
-          <a href="/" class="-m-1.5 p-1.5"> <img class="<?php if ($Device == 'iPhone' || $Device == 'Linux') echo 'h-15 w-20';
+          <a href="/" class="-m-1.5 p-1.5"> <img class="<?php if ($Device == 'iPhone' || $Device == 'Linux') echo 'h-auto w-10';
                                                         else echo 'h-auto w-14' ?>" src=<?= $logo_profile . "alt='Site Logo'" ?>> </a>
           <!-- Dropdown Menu -->
           <div><?php require($menu_dropdown); ?></div>
