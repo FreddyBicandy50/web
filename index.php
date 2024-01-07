@@ -1,9 +1,9 @@
 <?php
 # Include necessary files
+require("main/functions/database.php");
 require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
-require("main/functions/database.php");
 
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
@@ -11,6 +11,9 @@ if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
 
 # Webconsole
 else if ($_SERVER[$URI] == $route_webconsole) require("webconsole/webconsole.php");
+
+# test
+else if ($_SERVER[$URI] == '/test/') require("test/test.php");
 
 # BookStore
 else if ($_SERVER[$URI] == $route_bookstore_main)
