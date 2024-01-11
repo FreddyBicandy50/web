@@ -4,7 +4,7 @@ require("main/functions/database.php");
 require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
-
+#something new
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
 if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
