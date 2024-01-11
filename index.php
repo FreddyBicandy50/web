@@ -8,6 +8,7 @@ require("main/functions/fetch_URI.php");
 #something new
 #something new
 #something new
+#lalalala working on a test 
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
 if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
