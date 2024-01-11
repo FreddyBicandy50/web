@@ -33,6 +33,7 @@ $project_webconsole = "webconsole/";
 
 #Routes
 #bookstore
+$testing_pool = "/test/";
 $route_bookstore_main = '/bookstore/';
 $route_bookstore_filter = '/bookstore/filter';
 $route_bookstore_about = '/bookstore/about';
