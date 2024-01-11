@@ -1,7 +1,10 @@
 <?php
 # Function to establish a database connection based on the server environment
-class Database
+class Database 
 {
+    public function __construct(){
+        return('test');
+    }
     public function connect($db_name, $testing)
     {
         $hostname = $username = $password = $database_name = $port = '';
