@@ -12,6 +12,9 @@ if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
 # Webconsole
 else if ($_SERVER[$URI] == $route_webconsole) require("webconsole/webconsole.php");
 
+# testing
+else if ($_SERVER[$URI] == $route_webconsole) require("test/testing.php");
+
 # BookStore
 else if ($_SERVER[$URI] == $route_bookstore_main)
      # Library
