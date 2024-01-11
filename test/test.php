@@ -2,7 +2,6 @@
  <html>
 <?php include("database.php");?>
  <body bgcolor="#151e27">
-     
      <?php
         $db = new test_db('test', true); 
         $connection = $db->connect();
