@@ -1,9 +1,10 @@
 <?php
 # Function to establish a database connection based on the server environment
-class Database 
+class Database
 {
-    public function __construct(){
-        return('test');
+    public function __construct()
+    {
+        return ('test');
     }
     public function connect($db_name, $testing)
     {
@@ -26,7 +27,8 @@ class Database
         # Return the database connection for the remote environment
         return mysqli_connect($hostname, $username, $password, $database_name, $port);
     }
-    public function query($connection,$query){
-        return mysqli_query($connection,$query);
+    public function query($connection, $query)
+    {
+        return mysqli_query($connection, $query);
     }
 }
