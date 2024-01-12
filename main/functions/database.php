@@ -19,6 +19,7 @@ class Database
     }
     public function connect()
     {
+
         # Return the database connection for the remote environment
         return mysqli_connect($this->hostname, $this->username, $this->password, $this->database_name, $this->port);
     }

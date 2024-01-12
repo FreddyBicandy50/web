@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 #Variables
 $noCount = 0;
@@ -6,14 +6,14 @@ $yesCount = 0;
 $name = 'SERVER_NAME';
 $user = $_SERVER["HTTP_USER_AGENT"];
 $URI = 'REQUEST_URI';
-$giffy="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" ;
+$giffy = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif";
 
 
 
 #Main Pages 
 $main_page = "main/pages/main.php";
 $menu_dropdown = "main/partials/dropdown.php";
-$console_page= "webconsole/webconsole.php";
+$console_page = "webconsole/webconsole.php";
 $notfound_page = "main/pages/404.php";
 
 #LINKS
@@ -36,8 +36,8 @@ $testing_pool = "/test/";
 
 
 #bookstore
-$route_bookstore_main = '/bookstore/';
-$route_bookstore_filter = '/bookstore/filter';
+$route_bookstore_main = '/bookstore/?request=1';
+$route_bookstore_search = '/bookstore/search/?request=';
 $route_bookstore_about = '/bookstore/about';
 
 
@@ -46,7 +46,4 @@ $route_dateme_main = '/gowme/';
 $route_dateme_yes = '/SHESAIDYESS!';
 
 #webconsole
-$route_webconsole = '/console'; 
-
-
-
+$route_webconsole = '/console';

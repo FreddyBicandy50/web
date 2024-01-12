@@ -21,9 +21,9 @@ else if ($_SERVER[$URI] == $route_bookstore_main)
      # Library
      require("bookstore/controllers/library.php");
 
-else if ($_SERVER[$URI] == $route_bookstore_filter)
-     # Filter
-     require("bookstore/controllers/filter.php");
+else if ($_SERVER[$URI] == $route_bookstore_search . $_GET['request'])
+     # Search
+     require("bookstore/controllers/search.php");
 else if ($_SERVER[$URI] == $route_bookstore_about)
      # About
      require("bookstore/controllers/about.php");
