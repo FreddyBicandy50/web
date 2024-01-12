@@ -4,7 +4,6 @@ require("main/functions/database.php");
 require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
-require ('test/vendor/autoload.php');  
 
 #something new
 # MAIN PAGE
