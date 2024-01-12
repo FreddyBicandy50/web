@@ -36,8 +36,8 @@ $testing_pool = "/test/";
 
 
 #bookstore
-$route_bookstore_main = '/bookstore/';
-$route_bookstore_filter = '/bookstore/filter';
+$route_bookstore_main = '/bookstore/?request=1';
+$route_bookstore_filter = '/bookstore/filter/?request=';
 $route_bookstore_about = '/bookstore/about';
 
 
@@ -47,6 +47,4 @@ $route_dateme_yes = '/SHESAIDYESS!';
 
 #webconsole
 $route_webconsole = '/console'; 
-
-
 

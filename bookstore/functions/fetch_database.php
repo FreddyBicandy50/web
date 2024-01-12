@@ -3,6 +3,7 @@
 // Require the books_db.php file for database connectivity
 require("bookstore/partials/books_db.php");
 
+
 // Function to display book information in a table cell
 function display($book)
 {
@@ -43,4 +44,5 @@ while ($book = mysqli_fetch_assoc($result)) {
         $counter = 0;
         echo "</tr>";
     }
+
 }
