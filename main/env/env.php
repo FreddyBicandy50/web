@@ -50,5 +50,3 @@ $route_webconsole = '/console';
 
 
 
-#Session id 
-$session_ids=array('vcj7bjop8eldrobu0mt7snkpa2','sadasd2');

@@ -34,7 +34,6 @@
           <?= include("main/js/theme.js"); ?>
         </script>
         <?php 
-        array_push($session_ids,session_id()); 
         if ($Device == 'iPhone' || $Device == 'Linux') echo '<h6 id="theme_text" class="font-bold tracking-tight"></h6>';
         else echo '<h6 id="theme_text" class="font-bold tracking-tight">Change Theme</h6>' ?>
 
@@ -43,12 +42,6 @@
 </head>
 
 <body onload="default_style()">
-  <?php 
-    foreach($session_ids as $id){
-      echo $id."<br>";
-    }
-    
-  ?>
   <!-- Styling -->
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <!-- Background shapes -->
@@ -73,7 +66,7 @@
         <!-- Project Buttons -->
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a href="/gowme/" target="_blank" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-            Date me</a>
+            te me</a>
           <a href="/bookstore/" target="_blank" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             Book Store</a>
         </div>
