@@ -4,6 +4,8 @@ require("main/functions/database.php");
 require("main/env/env.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
+require ('test/vendor/autoload.php');  
+
 #something new
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
@@ -43,8 +45,3 @@ else if ($_SERVER[$URI] == $route_dateme_yes) {
 
 # Not Found 404!
 else include($notfound_page);
-
-
-  
-$id = session_id();
-print("Session Id: ".$id);

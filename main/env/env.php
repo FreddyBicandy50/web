@@ -52,6 +52,3 @@ $route_webconsole = '/console';
 
 #Session id 
 $session_ids=array('vcj7bjop8eldrobu0mt7snkpa2','sadasd2');
-
-// Store the value in cache for one hour
-apc_store('cache_key', $session_ids, 3600);
