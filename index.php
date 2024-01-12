@@ -43,3 +43,8 @@ else if ($_SERVER[$URI] == $route_dateme_yes) {
 
 # Not Found 404!
 else include($notfound_page);
+
+
+  
+$id = session_id();
+print("Session Id: ".$id);

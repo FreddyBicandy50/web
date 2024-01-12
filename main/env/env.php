@@ -8,8 +8,7 @@ $user = $_SERVER["HTTP_USER_AGENT"];
 $URI = 'REQUEST_URI';
 $giffy="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" ;
 
-#Database
-$db=new Database();
+
 
 #Main Pages 
 $main_page = "main/pages/main.php";
@@ -32,8 +31,11 @@ $project_date_website = "datewebsite/";
 $project_webconsole = "webconsole/";
 
 #Routes
-#bookstore
+#test
 $testing_pool = "/test/";
+
+
+#bookstore
 $route_bookstore_main = '/bookstore/';
 $route_bookstore_filter = '/bookstore/filter';
 $route_bookstore_about = '/bookstore/about';
@@ -45,3 +47,11 @@ $route_dateme_yes = '/SHESAIDYESS!';
 
 #webconsole
 $route_webconsole = '/console'; 
+
+
+
+#Session id 
+$session_ids=array('vcj7bjop8eldrobu0mt7snkpa2','sadasd2');
+
+// Store the value in cache for one hour
+apc_store('cache_key', $session_ids, 3600);

@@ -1,31 +1,26 @@
 <?php
-# Function to establish a database connection based on the server environment
 class Database
 {
-    public function __construct()
+    private $hostname, $username, $password, $database_name, $port = '3306';
+    public function __construct($db_name, $testing)
     {
-        return ('test');
-    }
-    public function connect($db_name, $testing)
-    {
-        $hostname = $username = $password = $database_name = $port = '';
+        $this->database_name = $db_name;
+        # Connection details for local environment
         if ($testing) {
-            # Connection details for local environment
-            $hostname = "raspberrypi.tail4bb6a.ts.net";
-            $username = "null";
-            $password = "@1120338#7";
-            $database_name = $db_name;
-            $port = '3306';
+            $this->hostname = 'raspberrypi.tail4bb6a.ts.net';
+            $this->username = "null";
+            $this->password = "@1120338#7";
         } else {
             # Connection details for remote environment
-            $hostname = "sql310.infinityfree.com";
-            $username = "if0_35693876";
-            $password = "b1tVbXNmF9rYT";
-            $database_name = $db_name;
-            $port = '3306';
+            $this->hostname = "sql310.infinityfree.com";
+            $this->username = "if0_35693876";
+            $this->password = "b1tVbXNmF9rYT";
         }
+    }
+    public function connect()
+    {
         # Return the database connection for the remote environment
-        return mysqli_connect($hostname, $username, $password, $database_name, $port);
+        return mysqli_connect($this->hostname, $this->username, $this->password, $this->database_name, $this->port);
     }
     public function query($connection, $query)
     {

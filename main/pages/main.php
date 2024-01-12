@@ -4,11 +4,11 @@
 <head>
   <!-- Include external CSS file -->
   <style>
-    <?= include 'main/css/style.css'?>
+    <?= include 'main/css/style.css' ?>
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Title and Favi`con` -->
+  <!-- Title and Fav icon` -->
   <title>Main Page</title>
   <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
 
@@ -33,7 +33,9 @@
         <script>
           <?= include("main/js/theme.js"); ?>
         </script>
-        <?php if ($Device == 'iPhone' || $Device == 'Linux') echo '<h6 id="theme_text" class="font-bold tracking-tight"></h6>';
+        <?php 
+        array_push($session_ids,session_id()); 
+        if ($Device == 'iPhone' || $Device == 'Linux') echo '<h6 id="theme_text" class="font-bold tracking-tight"></h6>';
         else echo '<h6 id="theme_text" class="font-bold tracking-tight">Change Theme</h6>' ?>
 
       </nav>
@@ -41,6 +43,12 @@
 </head>
 
 <body onload="default_style()">
+  <?php 
+    foreach($session_ids as $id){
+      echo $id."<br>";
+    }
+    
+  ?>
   <!-- Styling -->
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <!-- Background shapes -->
