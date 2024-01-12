@@ -18,27 +18,20 @@ else if ($_SERVER[$URI] == $testing_pool) require("test/test.php");
 
 # BookStore
 else if ($_SERVER[$URI] == $route_bookstore_main)
-# Library
+     # Library
      require("bookstore/controllers/library.php");
+
 else if ($_SERVER[$URI] == $route_bookstore_filter)
      # Filter
-{
-          echo "<br>SERVER URI={$_SERVER[$URI]} <br> routing=".$route_bookstore_filter.$_GET['request'];
-
      require("bookstore/controllers/filter.php");
-
-}
-else if ($_SERVER[$URI] == $route_bookstore_about.$_GET['request'])
+else if ($_SERVER[$URI] == $route_bookstore_about)
      # About
-     {
-          require("bookstore/controllers/about.php");
-
-     }
+     require("bookstore/controllers/about.php");
 
 # Date me Website
 else if ($_SERVER[$URI] == $route_dateme_main)
-# gowme
-require("datewebsite/controllers/date.php");
+     # gowme
+     require("datewebsite/controllers/date.php");
 
 else if ($_SERVER[$URI] == $route_dateme_yes) {
      # YES

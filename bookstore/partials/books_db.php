@@ -13,13 +13,11 @@ else
 if (!$connection)
         // Display an error message and terminate script execution if connection fails
         die("Error connecting to the database: " . mysqli_connect_error());
-else{
-        $query="SELECT * FROM Books WHERE {$_GET['request']};";
-        echo $query;
-        
+else
         // Query the 'Books' table and store the result in the $result variable
-        $result=$db->query($connection,$query);
-}
+        $result=$db->query($connection,'SELECT * FROM Books;');
+
+
 
 
         
