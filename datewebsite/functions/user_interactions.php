@@ -8,7 +8,7 @@ if (HTTP($server_local) || HTTP($server_private)) {
     // Connect to the 'test' database
     $connection = $db->connect();
 } else {
-    $db = new Database('if0_35693876_bookstore', false);
+    $db = new Database('if0_35693876_dateme', false);
     // Connect to the 'if0_35693876_bookstore' database
     $connection = $db->connect();
 }

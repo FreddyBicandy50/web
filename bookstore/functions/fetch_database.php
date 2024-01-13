@@ -20,8 +20,7 @@ function display($book)
 
 // Initialize a counter for table cell alignment
 $counter = 0;
-
-if (mysqli_num_rows($result)<1) {
+if (mysqli_num_rows($result)<=0) {
     print(
         "<h1 style='margin-top:20%'  align=center id='main_title' class='text-4xl font-bold text-gray-600 tracking-tight sm:text-6xl'>
                   Not Found
