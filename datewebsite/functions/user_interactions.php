@@ -1,16 +1,17 @@
 <?php
 
-
 // Get the session username
 $id = $_SESSION['username'];
 // Check if the current HTTP host matches the local or private server
-if (HTTP($server_local) || HTTP($server_private))
+if (HTTP($server_local) || HTTP($server_private)) {
+    $db = new Database('test', true);
     // Connect to the 'test' database
-    $connection=$db->connect('test',true);
-else
-    // Connect to the 'if0_35693876_dateme' database
-    $connection=$db->connect('if0_35693876_bookstore',false);
-
+    $connection = $db->connect();
+} else {
+    $db = new Database('if0_35693876_bookstore', false);
+    // Connect to the 'if0_35693876_bookstore' database
+    $connection = $db->connect();
+}
 
 // Check if the database connection was successful
 if (!$connection) {

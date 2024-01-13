@@ -1,6 +1,14 @@
 <?php
 
+
+
 #Variables
+// Start a session to store user information
+session_start();
+// Set the session variable 'username' to the session ID
+$_SESSION['username'] = session_id();
+// Get the user agent string from the HTTP headers
+$user = $_SERVER["HTTP_USER_AGENT"];
 $noCount = 0;
 $yesCount = 0;
 $name = 'SERVER_NAME';
@@ -12,7 +20,7 @@ $giffy = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4
 
 #Main Pages 
 $main_page = "main/pages/main.php";
-$menu_dropdown = "main/partials/dropdown.php";
+$menu_dropdown = "main/pages/dropdown.php";
 $console_page = "webconsole/webconsole.php";
 $notfound_page = "main/pages/404.php";
 
@@ -47,3 +55,4 @@ $route_dateme_yes = '/SHESAIDYESS!';
 
 #webconsole
 $route_webconsole = '/console';
+

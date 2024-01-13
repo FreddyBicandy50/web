@@ -1,16 +1,16 @@
 <?php
 
-$db = new Database('test', true);
 $request = explode("=", $_GET['request']);
-
 // Check if the server is local or private, and connect to the corresponding database
-if (HTTP($server_local) || HTTP($server_private))
+if (HTTP($server_local) || HTTP($server_private)) {
+        $db = new Database('test', true);
         // Connect to the 'test' database
         $connection = $db->connect();
-else
+} else {
+        $db = new Database('if0_35693876_bookstore', false);
         // Connect to the 'if0_35693876_bookstore' database
         $connection = $db->connect();
-
+}
 // Check if the connection to the database is successful
 if (!$connection)
         // Display an error message and terminate script execution if connection fails

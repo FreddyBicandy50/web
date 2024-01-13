@@ -1,46 +1,32 @@
 <?php
 # Include necessary files
+
+
+#DATABASE and FUNCTIONS
 require("main/functions/database.php");
-require("main/env/env.php");
-require("main/functions/fetch_agent.php");
 require("main/functions/fetch_URI.php");
+
+#Global Variables
+require("main/env/env.php");
+#Device Detector
+require("main/functions/fetch_agent.php");
+
+#Route
+require("main/partials/bookstore.php");
+require("main/partials/dateme.php");
+require("main/partials/webconsole.php");
+require("main/partials/testing.php");
+
+
 
 #something new
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
-if ($_SERVER[$URI] == '/' || $_SERVER[$URI] == '/?i=1') require($main_page);
+if (URL('/') || URL('/?i=1')) require($main_page);
 
-# Webconsole
-else if ($_SERVER[$URI] == $route_webconsole) require("webconsole/webconsole.php");
 
 # Testing
-else if ($_SERVER[$URI] == $testing_pool) require("test/test.php");
-
-# BookStore
-else if ($_SERVER[$URI] == $route_bookstore_main)
-     # Library
-     require("bookstore/controllers/library.php");
-
-else if ($_SERVER[$URI] == $route_bookstore_search . $_GET['request'])
-     # Search
-     require("bookstore/controllers/search.php");
-else if ($_SERVER[$URI] == $route_bookstore_about)
-     # About
-     require("bookstore/controllers/about.php");
-
-# Date me Website
-else if ($_SERVER[$URI] == $route_dateme_main)
-     # gowme
-     require("datewebsite/controllers/date.php");
-
-else if ($_SERVER[$URI] == $route_dateme_yes) {
-     # YES
-     $yesCount = isset($_POST['yesCount']) ? $_POST['yesCount'] : null;
-     $noCount = isset($_POST['noCount']) ? $_POST['noCount'] : null;
-     // Print the values for testing purposes
-
-     require("datewebsite/controllers/yes.php");
-}
+else if (URL($testing_pool)) require("test/test.php");
 
 # Not Found 404!
-else include($notfound_page);
+else die(include($notfound_page));
