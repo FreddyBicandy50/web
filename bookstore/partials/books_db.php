@@ -2,7 +2,7 @@
 
 $request = explode("=", $_GET['request']);
 // Check if the server is local or private, and connect to the corresponding database
-if (HTTP($server_local) || HTTP($server_private)) {
+if (HTTP($server_local[0]) || HTTP($server_local[1]) || HTTP($server_private[0])|| HTTP($server_private[1])) {
         $db = new Database('test', true);
         // Connect to the 'test' database
         $connection = $db->connect();

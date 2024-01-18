@@ -7,6 +7,7 @@
             else echo "Library"
             ?>
     </title>
+    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
     <script src="<?= $css_tailwind ?>"></script>
 </head>
 
@@ -22,9 +23,9 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="<?= $route_bookstore_main ?>" class="<?php echo $_SERVER[$URI] == $route_bookstore_main ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium" aria-current="page">Library</a>
-                                <a href="<?= $route_bookstore_search ?>" class="<?php echo $_SERVER[$URI] == $route_bookstore_search . $_GET['request'] ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium">Search</a>
-                                <a href="<?= $route_bookstore_about ?>" class="<?php echo $_SERVER[$URI] == $route_bookstore_about ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium">About</a>
+                                <a href="<?= $route_bookstore_main ?>" class="<?php echo URL($route_bookstore_main) ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium" aria-current="page">Library</a>
+                                <a href="<?= $route_bookstore_search ?>" class="<?php echo URL($route_bookstore_search . $_GET['request']) ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium">Search</a>
+                                <a href="<?= $route_bookstore_about ?>" class="<?php echo URL($route_bookstore_about) ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium">About</a>
                             </div>
                         </div>
                     </div>

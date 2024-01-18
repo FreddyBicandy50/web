@@ -1,15 +1,14 @@
 <?php
 # Include necessary files
 
+#Global Variables
+require("main/env/env.php");
 
 #DATABASE and FUNCTIONS
 require("main/functions/database.php");
-require("main/functions/fetch_URI.php");
-
-#Global Variables
-require("main/env/env.php");
-#Device Detector
 require("main/functions/fetch_agent.php");
+require("main/functions/fetch.php");
+
 
 #Route
 require("main/partials/bookstore.php");

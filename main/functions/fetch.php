@@ -14,3 +14,12 @@ function HTTP($request)
     if ($_SERVER['HTTP_HOST'] == $request) return true;
     return false;
 }
+
+
+
+function Mobile()
+{
+    // Compare the HTTP host with the given request
+    if ($Device=='Linux' || $Device=='iPhone') return true;
+    return false;
+}
