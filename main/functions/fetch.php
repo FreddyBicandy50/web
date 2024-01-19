@@ -17,7 +17,7 @@ function HTTP($request)
 
 
 
-function Mobile()
+function Mobile($Device)
 {
     // Compare the HTTP host with the given request
     if ($Device=='Linux' || $Device=='iPhone') return true;

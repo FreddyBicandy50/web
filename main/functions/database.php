@@ -26,9 +26,5 @@ class Database
     {
         return mysqli_query($connection, $query);
     }
-    public function switch_local()
-    {
-        $this->hostname = '192.168.0.109';
-        $this->connect();
-    }
+ 
 }
