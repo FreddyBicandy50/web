@@ -2,12 +2,12 @@
 class Database
 {
     private $hostname, $username, $password, $database_name, $port = '3306';
-    public function __construct($db_name, $testing)
+    public function __construct($db_name, $testing,$Host)
     {
         $this->database_name = $db_name;
         # Connection details for local environment
         if ($testing) {
-            $this->hostname = 'raspberrypi.tail4bb6a.ts.net';
+            $this->hostname =  $Host;
             $this->username = "null";
             $this->password = "@1120338#7";
         } else {
@@ -25,5 +25,10 @@ class Database
     public function query($connection, $query)
     {
         return mysqli_query($connection, $query);
+    }
+    public function switch_local()
+    {
+        $this->hostname = '192.168.0.109';
+        $this->connect();
     }
 }

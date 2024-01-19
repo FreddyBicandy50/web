@@ -10,7 +10,7 @@ require("bookstore/partials/header.php");
     <table>
       <?php
       // Include the fetch_database.php file to fetch data from the database
-      if ($_SERVER[$URI] == $route_bookstore_search) {
+      if (URL($route_bookstore_search)) {
         print(
           "<h1 style='margin-top:20%'  align=center id='main_title' class='text-4xl font-bold text-gray-600 tracking-tight sm:text-6xl'>
                   Search a book
