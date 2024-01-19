@@ -16,16 +16,19 @@
   <!-- Dropdown Trigger -->
   <a href="">
     <?php
-    $kali= 'localhost';
-    $rasbperry='Private Site';
+    $kali= ['Kali WSL','localhost'];
+    $rasbperry=['Rasbperry','192.168.0.109'];
     $online='Website';
+    $index;
     # Check the server environment and set content accordingly
     # Localhost
     if (HTTP($server_local[0]) || HTTP($server_local[1])) {
+      if(HTTP($server_local[0])) $index= 0;
+      else $index=1;
       #main options
       print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
-         $kali
+         $kali[$index]
          </p></a>");
       #other options
       print("
@@ -44,18 +47,20 @@
             </a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
-                    <a href='http://$server_private' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$rasbperry</a>
+                    <a href='http://$server_private[$index]'style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$rasbperry[0]</a>
                     <a href='$server_public' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$online</a>
               </div>");
     }
 
 
     # Private Hosting
-    else if (HTTP($server_private[0]) || HTTP($server_private[1])) {
+    else if (HTTP($server_private[0]) || HTTP('http://192.168.0.109/')) {
+      if (HTTP($server_local[0])) $index = 0;
+      else $index = 1;
       #main options
       print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
-         $rasbperry
+         $rasbperry[$index]
          </p></a>");
       #other options
       print("
@@ -74,7 +79,7 @@
             </a>");
       print(
         "<div id='myDropdown' class='dropdown-content'>
-                    <a href='http://$server_local' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$kali</a>
+                    <a href='http://$server_local[$index]' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$kali[0]</a>
                     <a href='$server_public' style='color:#10B981' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$online</a>
               </div>");
     }
@@ -90,8 +95,8 @@
       #other options
       print(
         "<div id='myDropdown' class='dropdown-content'>
-              <a href='http://$server_private' style=color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$rasbperry</a>
-              <a href='http://$server_local' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$kali</a>
+              <a href='http://$server_private[0]' style=color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$rasbperry[0]</a>
+              <a href='http://$server_local[0]' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$kali[0]</a>
         </div>");
     }
     ?>
