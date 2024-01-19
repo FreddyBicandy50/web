@@ -1,6 +1,6 @@
 <?php
 // Check if the device is an iPhone or running on Linux
-if ($Device == "iPhone" || $Device == "Linux")
+if (Mobile($Device))
     // Require the notfound_page if the condition is met
     require($notfound_page);
 else

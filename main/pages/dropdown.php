@@ -2,7 +2,7 @@
 <!-- Include external CSS file -->
 
 <style>
-  <?= include 'main/css/style.css' ?>
+  <?= include 'main/style/style.css' ?>
 </style>
 
 <!-- Include external JavaScript file for theme functionality -->
@@ -33,7 +33,7 @@
       #other options
       print("
          <a href='/console'>");
-      if ($Device == 'iPhone' || $Device == 'Linux') {
+      if (Mobile($Device)) {
         echo '';
       } else {
         print("
@@ -65,7 +65,7 @@
       #other options
       print("
          <a href='/console'>");
-      if ($Device == 'iPhone' || $Device == 'Linux') {
+      if (Mobile($Device)) {
         echo '';
       } else {
         print("

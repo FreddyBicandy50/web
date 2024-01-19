@@ -2,7 +2,7 @@
 
 <?php
 # Check if the current URI matches the specified route for the Date Me main page
-if ($_SERVER[$URI] == $route_dateme_main) {
+if (URL($route_dateme_main)) {
     $load_message = "Use your laptop habibi❤️";  # Set a specific message if the condition is met
 } else {
     $load_message = "Oops page Not Found!";  # Set a default message if the condition is not met
