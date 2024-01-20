@@ -1,13 +1,14 @@
 <?php
 class Database
 {
+    
     private $hostname, $username, $password, $database_name, $port = '3306';
     public function __construct($db_name, $testing,$Host)
     {
         $this->database_name = $db_name;
         # Connection details for local environment
         if ($testing) {
-            $this->hostname =  $Host;
+            $this->hostname =  "192.168.0.109";
             $this->username = "null";
             $this->password = "@1120338#7";
         } else {
@@ -28,3 +29,5 @@ class Database
     }
  
 }
+
+ 

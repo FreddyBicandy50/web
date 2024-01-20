@@ -5,7 +5,7 @@ require("bookstore/partials/header.php");
 
 <main>
   <!-- Main content section -->
-  <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <!-- Display a table using data fetched from the database -->
     <table>
       <?php

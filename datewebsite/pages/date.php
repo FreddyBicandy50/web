@@ -4,6 +4,7 @@
 <head>
     <!-- Set the title of the HTML page to a face emoji -->
     <title>🥹</title>
+    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
 
     <!-- Include external CSS file for styling -->
     <style>

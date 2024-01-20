@@ -1,4 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
 
 <?php
 # Check if the current URI matches the specified route for the Date Me main page
@@ -11,6 +12,8 @@ if (URL($route_dateme_main)) {
 
 <head>
     <title>404!</title>
+    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
+
     <!-- Include Tailwind CSS -->
     <script src=<?= $css_tailwind ?>></script>
     <!-- Include a JavaScript file for theme change -->
