@@ -24,7 +24,7 @@ if (Mobile($Device)) {
     <div class="container">
         <!-- Heading section with an invitation message -->
         <div>
-            <h1 class="header_text">Do you wanna go out with me?</h1>
+            <h1 class="header_text">fine okhtfik nos se3a?</h1>
         </div>
 
         <!-- Container for a dynamic GIF illustration with a PHP variable -->
