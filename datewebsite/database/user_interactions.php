@@ -9,8 +9,8 @@ if (!$connection) {
     $time = date("h:i:sa");
     $getdate = date('Y/m/d');
     // Insert data into the 'dateme' table
-    
-    $query="INSERT INTO dateme (Session_id, Device_name, yes, no_avoid, date_entry, time_entry)
+
+    $query = "INSERT INTO dateme (Session_id, Device_name, yes, no_avoid, date_entry, time_entry)
     VALUES ('$id', '$Device', $yesCount, $noCount, '$getdate', '$time');";
-    $db->query($connection,$query);
+    $db->query($connection, $query);
 }

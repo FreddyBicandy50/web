@@ -16,15 +16,15 @@
   <!-- Dropdown Trigger -->
   <a href="">
     <?php
-    $kali= ['Kali WSL','localhost'];
-    $rasbperry=['Rasbperry','192.168.0.109'];
-    $online='Website';
+    $kali = ['Kali WSL', 'localhost'];
+    $rasbperry = ['Rasbperry', '192.168.0.109'];
+    $online = 'Website';
     $index;
     # Check the server environment and set content accordingly
     # Localhost
     if (HTTP($server_local[0]) || HTTP($server_local[1])) {
-      if(HTTP($server_local[0])) $index= 0;
-      else $index=1;
+      if (HTTP($server_local[0])) $index = 0;
+      else $index = 1;
       #main options
       print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>

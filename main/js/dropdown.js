@@ -15,7 +15,7 @@ window.onclick = function (event) {
     // Iterate through the dropdowns
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
-      
+
       // Check if the current dropdown is open
       if (openDropdown.classList.contains("show")) {
         // Close the dropdown by removing the "show" class
@@ -24,4 +24,3 @@ window.onclick = function (event) {
     }
   }
 };
-

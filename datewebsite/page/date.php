@@ -1,7 +1,7 @@
 <?php
-    if(Mobile($Device)){
-        die(require($notfound_page));
-    }
+if (Mobile($Device)) {
+    die(require($notfound_page));
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

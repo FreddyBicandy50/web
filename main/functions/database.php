@@ -1,9 +1,9 @@
 <?php
 class Database
 {
-    
+
     private $hostname, $username, $password, $database_name, $port = '3306';
-    public function __construct($db_name, $testing,$Host)
+    public function __construct($db_name, $testing, $Host)
     {
         $this->database_name = $db_name;
         # Connection details for local environment
@@ -27,7 +27,4 @@ class Database
     {
         return mysqli_query($connection, $query);
     }
- 
 }
-
- 

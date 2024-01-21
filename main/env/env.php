@@ -27,7 +27,7 @@ $logo_theme = "https://raw.githubusercontent.com/FreddyBicandy50/web/features/ma
 $logo_web = "https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500";
 $logo_profile = "https://avatars.githubusercontent.com/u/79138306?v=4";
 $css_tailwind = "https://cdn.tailwindcss.com";
-$server_local =["kali-wsl.tail4bb6a.ts.net",'localhost'];
+$server_local = ["kali-wsl.tail4bb6a.ts.net", 'localhost'];
 $server_private = ["raspberrypi.tail4bb6a.ts.net", '192.168.0.109'];
 $server_public = "https://freddybicandy.42web.io/";
 
@@ -40,4 +40,3 @@ $testing_pool = "/test/";
 
 #webconsole
 $route_webconsole = '/console';
-

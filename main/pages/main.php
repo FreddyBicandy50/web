@@ -28,7 +28,7 @@
         </div>
         <!-- Theme Switch Button -->
         <button onclick="window.location.href=window.location.href+'?i=1'"><img class="<?php if (Mobile($Device)) echo 'h-auto w-8';
-                                                                                              else echo 'h-8 w-auto' ?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
+                                                                                        else echo 'h-8 w-auto' ?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
 
         <script>
           <?= include("main/js/theme.js"); ?>

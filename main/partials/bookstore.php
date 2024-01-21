@@ -6,9 +6,9 @@ $url = explode("?", $_SERVER[$URI]);
 $url[1] = '?' . $url[1];
 
 #MAIN
-if (URL($bookstore) || URL($bookstore.$url[1])) {     
+if (URL($bookstore) || URL($bookstore . $url[1])) {
      #route /bookstore/ -> /?request=1
-     if(URL($bookstore)){
+     if (URL($bookstore)) {
           echo "<script>location.href='$url[1]';</script>";
      }
      die(require("bookstore/page/library.php"));
