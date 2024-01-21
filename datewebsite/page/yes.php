@@ -1,3 +1,4 @@
+<?php require("datewebsite/database/user_interactions.php");?>
 <!DOCTYPE html>
 <html lang="en">
 

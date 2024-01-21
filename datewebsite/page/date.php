@@ -1,3 +1,8 @@
+<?php
+    if(Mobile($Device)){
+        die($notfound_page);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -35,13 +35,8 @@ $project_date_website = "datewebsite/";
 $project_webconsole = "webconsole/";
 
 
-#Routes
 #test
 $testing_pool = "/test/";
-
-#date me
-$route_dateme_main = '/gowme/';
-$route_dateme_yes = '/SHESAIDYESS!';
 
 #webconsole
 $route_webconsole = '/console';
