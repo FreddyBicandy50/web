@@ -28,7 +28,7 @@
       #main options
       print("
          <p style='margin-left:20px;color:#7a7df3' class='font-bold tracking-tight text-gray-500 sm:text-3xl'>
-         $kali[$index]
+          $kali[$index]
          </p></a>");
       #other options
       print("
@@ -54,8 +54,8 @@
 
 
     # Private Hosting
-    else if (HTTP($server_private[0]) || HTTP('http://192.168.0.109/')) {
-      if (HTTP($server_local[0])) $index = 0;
+    else if (HTTP($server_private[0]) || HTTP($server_private[1])) {
+      if (HTTP($server_private[0])) $index = 0;
       else $index = 1;
       #main options
       print("
@@ -69,10 +69,10 @@
         echo '';
       } else {
         print("
-              <img style='margin-top: -3%; margin-left:180px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
+              <img style='margin-top: -3%; margin-left:210px;width:3%' src='https://www.svgrepo.com/show/504947/termius.svg'/>
                 ");
       }
-      print("<p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:22%;width:3%'>
+      print("<p id='console' class='font-bold tracking-tight sm:text-1xl' style='margin-top: -3%; margin-left:25%;width:3%'>
                   (<i>console</i>)
                 </p>         
               </a> 
