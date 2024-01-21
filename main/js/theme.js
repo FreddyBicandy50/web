@@ -1,7 +1,7 @@
 // Variable to track the current theme (dark or light)
 // Function to set the default styling for the page
 function default_style() {
-  if (window.location.href.indexOf("localhost/?i=1") != -1) return change_theme(true);
+  if (window.location.search=='?i=1') return change_theme(true);
   else{
     change_theme(false);
   }  

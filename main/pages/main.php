@@ -27,8 +27,8 @@
 
         </div>
         <!-- Theme Switch Button -->
-        <button onclick="window.location.href='http://localhost/?i=1'"><img class="<?php if (Mobile($Device)) echo 'h-auto w-8';
-                                                                                    else echo 'h-8 w-auto' ?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
+        <button onclick="window.location.href=window.location.href+'?i=1'"><img class="<?php if (Mobile($Device)) echo 'h-auto w-8';
+                                                                                              else echo 'h-8 w-auto' ?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
 
         <script>
           <?= include("main/js/theme.js"); ?>
@@ -42,6 +42,7 @@
 </head>
 
 <body onload="default_style(true)">
+
   <!-- Styling -->
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <!-- Background shapes -->
