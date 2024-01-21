@@ -31,21 +31,13 @@ $server_local =["kali-wsl.tail4bb6a.ts.net",'localhost'];
 $server_private = ["raspberrypi.tail4bb6a.ts.net", '192.168.0.109'];
 $server_public = "https://freddybicandy.42web.io/";
 
-#Projects
-$project_bookstore = "bookstore/";
 $project_date_website = "datewebsite/";
 $project_webconsole = "webconsole/";
+
 
 #Routes
 #test
 $testing_pool = "/test/";
-
-
-#bookstore
-$route_bookstore_main = '/bookstore/?request=1';
-$route_bookstore_search = '/bookstore/search/?request=';
-$route_bookstore_about = '/bookstore/about';
-
 
 #date me
 $route_dateme_main = '/gowme/';

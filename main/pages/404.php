@@ -22,7 +22,7 @@ if (URL($route_dateme_main)) {
     </script>
 </head>
 
-<body onload="change_theme()">
+<body onload="change_theme(true)">
     <!-- Styling -->
     <div class="relative isolate px-6 pt-14 lg:px-8">
         <!-- Background shapes -->

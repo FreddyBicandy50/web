@@ -1,6 +1,6 @@
 <?php
 // Require the header.php file to include the common header content
-require("bookstore/partials/header.php");
+require("bookstore/partials/template.php");
 ?>
 
 <main>
@@ -10,7 +10,7 @@ require("bookstore/partials/header.php");
     <table>
       <?php
       // Include the fetch_database.php file to fetch data from the database
-      if (URL($route_bookstore_search)) {
+      if (URL($bookstore_search)) {
         print(
           "<h1 style='margin-top:20%'  align=center id='main_title' class='text-4xl font-bold text-gray-600 tracking-tight sm:text-6xl'>
                   Search a book
@@ -21,8 +21,7 @@ require("bookstore/partials/header.php");
             </p>
             ");
       }
-
-      require("bookstore/functions/fetch_database.php");
+      require("bookstore/function/fetch_database.php");
 
       ?>
     </table>

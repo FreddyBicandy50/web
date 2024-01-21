@@ -41,7 +41,7 @@
     </header>
 </head>
 
-<body onload="default_style()">
+<body onload="default_style(true)">
   <!-- Styling -->
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <!-- Background shapes -->
@@ -67,7 +67,7 @@
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a href="<?= $route_dateme_main ?>" target="_blank" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             Date me</a>
-          <a href="<?= $route_bookstore_main ?>" target="_blank" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <a href="<?= $bookstore ?>" target="_blank" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             Book Store</a>
         </div>
       </div>

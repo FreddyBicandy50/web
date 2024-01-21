@@ -1,6 +1,6 @@
 <?php
 // Require the header.php file to include the common header content
-require("bookstore/partials/header.php");
+require("bookstore/partials/template.php");
 ?>
 
 <main>
@@ -9,8 +9,9 @@ require("bookstore/partials/header.php");
     <!-- Display a table using data fetched from the database -->
     <table>
       <?php
+
       // Include the fetch_database.php file to fetch data from the database
-      require("bookstore/functions/fetch_database.php");
+      require("bookstore/function/fetch_database.php");
       ?>
     </table>
   </div>

@@ -1,7 +1,7 @@
 <?php
 // rebase
 // Require the books_db.php file for database connectivity
-require("bookstore/partials/books_db.php");
+require("bookstore/database/books_database.php");
 
 // Function to display book information in a table cell
 function display($book)
@@ -20,7 +20,7 @@ function display($book)
 
 // Initialize a counter for table cell alignment
 $counter = 0;
-if (mysqli_num_rows($result)<=0) {
+if (mysqli_num_rows($result) <= 0) {
     print(
         "<h1 style='margin-top:20%'  align=center id='main_title' class='text-4xl font-bold text-gray-600 tracking-tight sm:text-6xl'>
                   Not Found
