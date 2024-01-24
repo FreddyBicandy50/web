@@ -1,5 +1,16 @@
 // Variable to track the current theme (dark or light)
 // Function to set the default styling for the page
+
+function redirect(){
+  const myArray = window.location.href.split("?");
+  if(myArray[1] != "i=1"){
+    window.location.href=window.location.href+'?i=1'
+  }else{
+    const myArray = window.location.href.split("?");
+    window.location.href=myArray[0];
+  }
+}
+
 function default_style() {
   if (window.location.search == "?i=1") return change_theme(true);
   else {
