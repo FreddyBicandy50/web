@@ -15,6 +15,7 @@ require("main/partials/bookstore.php");
 require("main/partials/dateme.php");
 require("main/partials/webconsole.php");
 require("main/partials/testing.php");
+require("main/partials/notes.php");
 
 
 
