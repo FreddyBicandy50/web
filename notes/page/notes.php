@@ -15,6 +15,7 @@ require("notes/partials/template.php"); ?>
         <ul role="list" class="divide-y divide-gray-100">
 
             <?php
+           
             while ($notes = mysqli_fetch_assoc($result)) {
                 print("
                     <li class='flex justify-between gap-x-6 py-5'>

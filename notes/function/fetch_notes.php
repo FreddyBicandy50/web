@@ -9,7 +9,7 @@ if (!$connection)
     die("Error connecting to the database: " . mysqli_connect_error());
 else {
     if (URL($notes_main)) {
-        $query = "SELECT notes.id as note_id , notes.note as content , notes.`date` , notes.due ,users.id, users.name,users.email,users.image
+        $query = "SELECT notes.id as note_id , notes.note as content , notes.`date` , notes.due ,users.id as user_id, users.name,users.email,users.image
 FROM notes
 JOIN users ON notes.user_id = users.id";
     } else if (URL($notes_description . $request) || URL($notes_description . '/' . $request)) {
@@ -18,7 +18,7 @@ JOIN users ON notes.user_id = users.id";
         $query = "SELECT notes.note as title , notes.Description as content ,notes.due as due
 FROM notes
 JOIN users ON notes.user_id = users.id
-WHERE notes.id=$id";
+WHERE  notes.id=$id";
     }
 
     $result = $db->query($connection, $query);
