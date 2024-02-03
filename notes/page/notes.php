@@ -1,9 +1,11 @@
-<?php require("notes/partials/template.php"); ?>
+<?php
+$Title = 'Notes';
+require("notes/partials/template.php"); ?>
 
 
 
 <main>
-    <div>
+ <div>
         <?php
         require('notes/function/fetch_notes.php');
 
@@ -23,7 +25,7 @@
                         <p class='mt-1 truncate text-xs leading-5 text-gray-500'>{$notes['email']}</p>
                     </div>
                     <div class='flex justify-between gap-x-6 py-0'>
-                        <p class='mt-1 truncate text-xl leading-5 text-gray-700'>{$notes['note']}
+                        <p class='mt-1 truncate text-xl leading-5 text-gray-700'><a href='$notes_description?request={$notes['note_id']}'>{$notes['content']}</a>
                     </div>
  
                 </div>
@@ -32,7 +34,7 @@
                     <p class='mt-1 text-xs leading-5 text-gray-500'>entry date <time datetime='2023-01-23T13:23Z'>{$notes['date']}</time></p>
                 </div>
             </li>"
-            );
+                );
             }
             ?>
 

@@ -28,7 +28,7 @@
         </div>
         <!-- Theme Switch Button -->
         <button onclick="redirect()"><img class="<?php if (Mobile($Device)) echo 'h-auto w-8';
-                                                                                        else echo 'h-8 w-auto' ?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
+                                                  else echo 'h-8 w-auto' ?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
 
         <script>
           <?= include("main/js/theme.js"); ?>
@@ -66,14 +66,16 @@
         </p>
         <!-- Project Buttons -->
         <?php
-          if($_SERVER["HTTP_HOST"]!= 'freddybicandy.42web.io'){
-            print("<div class='mt-10 flex items-center justify-center gap-x-6'>
+        if ($_SERVER["HTTP_HOST"] != 'freddybicandy.42web.io') {
+          print("<div class='mt-10 flex items-center justify-center gap-x-6'>
           <a href='$dateme_main' target='_blank' class='rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
             Date me</a>
             <a href='$bookstore' target='_blank' class='rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
             Book Store</a>
+            <a href='$notes_main' target='_blank' class='rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
+            Notes App</a>
         </div>");
-          }
+        }
         ?>
       </div>
     </div>

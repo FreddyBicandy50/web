@@ -24,7 +24,7 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="<?= $bookstore ?>" class="<?php echo URL($bookstore."?") ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium" aria-current="page">Library</a>
+                                <a href="<?= $bookstore ?>" class="<?php echo URL($bookstore . "?") ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium" aria-current="page">Library</a>
                                 <a href="<?= $bookstore_search ?>" class="<?php echo URL($bookstore_search . $_GET['request']) ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium">Search</a>
                                 <a href="<?= $bookstore_about ?>" class="<?php echo URL($bookstore_about) ? "bg-gray-900 text-white rounded-md px-3" : "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md" ?> py-2 text-sm font-medium">About</a>
                             </div>

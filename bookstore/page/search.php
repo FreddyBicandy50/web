@@ -1,6 +1,7 @@
 <?php
 // Require the header.php file to include the common header content
 require("bookstore/partials/template.php");
+ 
 ?>
 
 <main>

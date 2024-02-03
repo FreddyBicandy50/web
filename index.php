@@ -24,9 +24,5 @@ require("main/partials/notes.php");
 # Check if the URI is the root or has a specific parameter
 if (URL('/') || URL('/?i=1')) require($main_page);
 
-
-# Testing
-else if (URL($testing_pool)) require("test/test.php");
-
 # Not Found 404!
 else die(include($notfound_page));
