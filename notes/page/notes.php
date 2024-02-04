@@ -5,17 +5,17 @@ require("notes/partials/template.php"); ?>
 
 
 <main>
- <div>
+    <div>
         <?php
         require('notes/function/fetch_notes.php');
-
+        
         ?>
     </div>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <ul role="list" class="divide-y divide-gray-100">
 
             <?php
-           
+
             while ($notes = mysqli_fetch_assoc($result)) {
                 print("
                     <li class='flex justify-between gap-x-6 py-5'>
