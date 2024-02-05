@@ -5,18 +5,13 @@
 require("main/env/env.php");
 
 #DATABASE and FUNCTIONS
-require("main/functions/database.php");
+require("main/database/database.php");
 require("main/functions/fetch_agent.php");
 require("main/functions/fetch.php");
 
 
 #Route
-require("main/partials/bookstore.php");
-require("main/partials/dateme.php");
-require("main/partials/webconsole.php");
-require("main/partials/testing.php");
-require("main/partials/notes.php");
-
+require("router.php");
 
 
 #something new

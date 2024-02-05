@@ -1,7 +1,9 @@
 <?php
 // Require the header.php file to include the common header content
 require("bookstore/partials/template.php");
- 
+require("bookstore/function/display.php");
+
+
 ?>
 
 <main>
@@ -12,17 +14,18 @@ require("bookstore/partials/template.php");
       <?php
       // Include the fetch_database.php file to fetch data from the database
       if (URL($bookstore_search)) {
-        print(
-          "<h1 style='margin-top:20%'  align=center id='main_title' class='text-4xl font-bold text-gray-600 tracking-tight sm:text-6xl'>
-                  Search a book
-              </h1>
+        label("Search book");
+      } else {
 
-            <p style='margin-left:35%' class='mt-6 text-lg leading-8 text-gray-400'>
-                <i>/?request=[Name,Author,Publish_Date]=`value`</i>
-            </p>
-            ");
+        require("bookstore/database/connection.php");
+        require("main/database/fetch.php");
+        $row = fetch($result);
+        if (!$row) label("Not found");
+        else display($row, $book);
+        
       }
-      require("bookstore/function/fetch_database.php");
+      // Check the current URI to determine whether to display the book
+
 
       ?>
     </table>

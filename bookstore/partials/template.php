@@ -1,4 +1,3 @@
-<?php include("bookstore/partials/vars.php") ?>
 <html class="h-full bg-gray-100">
 
 <head>

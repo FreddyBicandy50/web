@@ -1,6 +1,6 @@
 <?php
 
-require("bookstore/partials/vars.php");
+require("bookstore/partials/variables.php");
 # BookStore
 $url = explode("?", $_SERVER[$URI]);
 $url[1] = '?' . $url[1];
