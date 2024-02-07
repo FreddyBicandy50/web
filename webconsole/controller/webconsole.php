@@ -1,4 +1,4 @@
 <?php
 
 # Webconsole
-if (URL($route_webconsole)) die(require("webconsole/webconsole.php"));
+if (URL($route_webconsole)) die(require("webconsole/page/webconsole.php"));
