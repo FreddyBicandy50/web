@@ -24,9 +24,6 @@ require("bookstore/function/display.php");
         else display($row, $book);
         
       }
-      // Check the current URI to determine whether to display the book
-
-
       ?>
     </table>
   </div>

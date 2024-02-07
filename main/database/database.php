@@ -8,7 +8,7 @@ class Database
         $this->database_name = $db_name;
         # Connection details for local environment
         if ($testing) {
-            $this->hostname =  "192.168.0.109";
+            $this->hostname =  $Host;
             $this->username = "null";
             $this->password = "@1120338#7";
         } else {
