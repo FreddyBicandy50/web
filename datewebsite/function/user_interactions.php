@@ -1,6 +1,7 @@
 <?php
 require('datewebsite/database/connection.php');
 
+
 $connection = $db->connect();
 // Check if the database connection was successful
 if (!$connection) {
