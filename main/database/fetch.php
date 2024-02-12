@@ -8,7 +8,7 @@ function fetch($result){
         // Loop through the result set of books
         while ($values = mysqli_fetch_assoc($result)) {
             $values_array[]=$values;
-        }
+        } 
     }
     return $values_array;
 }
