@@ -9,7 +9,7 @@ class Database
         # Connection details for local environment
         if ($testing) {
             $this->hostname =  "100.150.90.109";
-            $this->username = "root";
+            $this->username = "null";
             $this->password = "@1120338#7";
         } else {
             # Connection details for remote environment
