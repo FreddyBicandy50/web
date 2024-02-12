@@ -1,6 +1,6 @@
 <?php
 
-$db = new Database('test', true, $server_private[0]);
+$db = new Database('test', true, $server_private);
 $connection = $db->connect();
 // Check if the connection to the database is successful
 
