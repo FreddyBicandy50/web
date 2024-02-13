@@ -12,6 +12,9 @@ require("main/functions/fetch.php");
 
 #Route
 require("router.php");
+echo ("<pre>");
+var_dump($_SERVER);
+echo ("</pre>");
 
 #something new
 # MAIN PAGE
