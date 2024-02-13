@@ -13,8 +13,8 @@ else {
 FROM notes
 JOIN users ON notes.user_id = users.id";
     } else if (URL($notes_description . $request) || URL($notes_description . '/' . $request)) {
-        $id = explode("=", $request);
-        $id = $id[1];
+            $id = explode("=", $request);
+            $id = $id[1]; 
         $query = "SELECT notes.note as title , notes.Description as content ,notes.due as due
 FROM notes
 JOIN users ON notes.user_id = users.id
@@ -23,3 +23,4 @@ WHERE  notes.id=$id";
 
     $result = $db->query($connection, $query);
 }
+

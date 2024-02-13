@@ -13,7 +13,7 @@ require("main/functions/fetch.php");
 #Route
 require("router.php");
 
-
+echo "test";
 #something new
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
