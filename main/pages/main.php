@@ -4,7 +4,8 @@
 <head>
   <!-- Include external CSS file -->
   <style>
-    <?= include 'main/css/style.css' ?>
+    <?=     
+    include 'main/css/style.css' ?>
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

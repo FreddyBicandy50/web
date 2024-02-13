@@ -1,7 +1,6 @@
 <?php
 $Title = 'Description';
 require('notes/partials/template.php');
-
 ?>
 <main>
     <div>
