@@ -6,7 +6,7 @@ require('cars_num/partials/template.php');
 
 <section class='flex flex-col antialiased bg-gray-100 text-gray-600 min-h-screen p-4'>
     <?php
-    print("<h1>Result Page</h1><br>Plate:{$_POST['plate']}");
+    print("request:{$_POST['plate']}");
     if (!empty($_POST['plate'])) {
         require("cars_num/database/connection.php");
         $query = "SELECT * from cars_NB WHERE ActualNB='{$_POST['plate']}'";
