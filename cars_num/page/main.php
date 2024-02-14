@@ -1,16 +1,18 @@
 <?php
-
-
 require('cars_num/partials/template.php');
-require('cars_num/database/connection.php');
+
 ?>
 
 
 <section class='flex flex-col antialiased bg-gray-100 text-gray-600 min-h-screen p-4'>
-    <?php 
-    
-    while ($info = mysqli_fetch_assoc($result)) {
-    print("
+    <?php
+    print("<h1>Result Page</h1><br>Plate:{$_POST['plate']}");
+    if (!empty($_POST['plate'])) {
+        require("cars_num/database/connection.php");
+        $query = "SELECT * from cars_NB WHERE ActualNB='{$_POST['plate']}'";
+        $result = $db->query($connection, $query);
+        while ($info = mysqli_fetch_assoc($result)) {
+            print("
     <div class='h-full'>
         <!-- Table -->
         <div align='left' class='w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200'>
@@ -73,6 +75,9 @@ require('cars_num/database/connection.php');
 
             </div>
         </div>
-    </div>");}?>
+    </div>");
+        }
+    }
 
+    ?> 
 </section>

@@ -42,5 +42,7 @@ require("notes/partials/template.php"); ?>
         </ul>
 
     </div>
+
+    <a href=<?= $notes_create?>>Create</a>
 </main>
 </div>
