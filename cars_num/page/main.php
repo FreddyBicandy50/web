@@ -1,9 +1,6 @@
 <?php
 require('cars_num/partials/template.php');
-
-?>
-
-
+?> 
 <section class='flex flex-col antialiased bg-gray-100 text-gray-600 min-h-screen p-4'>
     <?php
     print("request:{$_POST['plate']}");

@@ -1,11 +1,11 @@
-<?php require("cars_num/partials/template.php");?>
+<?php require("cars_num/partials/template.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Form</title>
+    <title>Search</title>
     <style>
         body {
             display: flex;
@@ -50,7 +50,7 @@
                 <span class="text-gray-500 sm:text-sm"></span>
             </div>
 
-            <input type="text" name="price" id="price" class="block w-50 rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="00-00-00">
+            <input type="number" name="plate" id="plate" class="block w-50 rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="00-00-00">
 
             <button class='rounded-md bg-indigo-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' id="search" name="search">search</button>
         </div>
