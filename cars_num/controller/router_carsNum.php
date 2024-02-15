@@ -1,5 +1,5 @@
 <?php
-    
+    require("cars_num/partials/router.php");
     if(URL($carsNum_main) || URL($carsNum_main.'/')){
        die(require("cars_num/page/search.php"));
    }
