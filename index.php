@@ -2,12 +2,12 @@
 # Include necessary files
 
 #Global Variables
-require("main/env/env.php");
+require(".main/env/env.php");
 
 #DATABASE and FUNCTIONS
-require("main/database/database.php");
-require("main/functions/fetch_agent.php");
-require("main/functions/fetch.php");
+require(".main/database/database.php");
+require(".main/functions/fetch_agent.php");
+require(".main/functions/fetch.php");
 
 
 #Route

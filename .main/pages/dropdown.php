@@ -2,12 +2,12 @@
 <!-- Include external CSS file -->
 
 <style>
-  <?= include 'main/style/style.css' ?>
+  <?= include '.main/style/style.css' ?>
 </style>
 
 <!-- Include external JavaScript file for theme functionality -->
 <script>
-  <?= include("main/js/theme.js"); ?>
+  <?= include(".main/js/theme.js"); ?>
 </script>
 
 <!-- DROPDOWN -->

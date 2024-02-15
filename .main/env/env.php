@@ -18,10 +18,10 @@ $giffy = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4
 
 
 #Main Pages 
-$main_page = "main/pages/main.php";
-$menu_dropdown = "main/pages/dropdown.php";
+$main_page = ".main/pages/main.php";
+$menu_dropdown = ".main/pages/dropdown.php";
 $console_page = "webconsole/webconsole.php";
-$notfound_page = "main/pages/404.php";
+$notfound_page = ".main/pages/404.php";
 
 #LINKS
 $logo_theme = "https://raw.githubusercontent.com/FreddyBicandy50/web/features/main/img/theme.png";

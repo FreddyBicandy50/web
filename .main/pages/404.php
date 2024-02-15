@@ -19,7 +19,7 @@ if (URL($dateme_main)) {
     <script src=<?= $css_tailwind ?>></script>
     <!-- Include a JavaScript file for theme change -->
     <script>
-        <?= include("main/js/theme.js"); ?>
+        <?= include(".main/js/theme.js"); ?>
     </script>
 </head>
 
@@ -42,7 +42,7 @@ if (URL($dateme_main)) {
                 <!-- Welcome message -->
                 <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl">
                     <?php
-                    require("main/functions/fetch_agent.php");
+                    require(".main/functions/fetch_agent.php");
                     echo "404!<br>" . $load_message;  # Display the 404 message with the loaded message
                     ?>
                 </h1>

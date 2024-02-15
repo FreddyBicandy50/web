@@ -5,7 +5,7 @@
   <!-- Include external CSS file -->
   <style>
     <?=     
-    include 'main/css/style.css' ?>
+    include '.main/css/style.css' ?>
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,7 +32,7 @@
                                                   else echo 'h-8 w-auto' ?>" src=<?= $logo_theme . " alt='Theme Icon'" ?>></button>
 
         <script>
-          <?= include("main/js/theme.js"); ?>
+          <?= include(".main/js/theme.js"); ?>
         </script>
         <?php
         if (Mobile($Device)) echo '<h6 id="theme_text" class="font-bold tracking-tight"></h6>';
