@@ -1,15 +1,7 @@
 <?php
 require('cars_num/partials/template.php');
-?> 
-<section class='flex flex-col antialiased bg-gray-100 text-gray-600 min-h-screen p-4'>
-    <?php
-    print("request:{$_POST['plate']}");
-    if (!empty($_POST['plate'])) {
-        require("cars_num/database/connection.php");
-        $query = "SELECT * from cars_NB WHERE ActualNB='{$_POST['plate']}'";
-        $result = $db->query($connection, $query);
-        while ($info = mysqli_fetch_assoc($result)) {
-            print("
+function display($info){
+    print("
     <div class='h-full'>
         <!-- Table -->
         <div align='left' class='w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200'>
@@ -73,8 +65,26 @@ require('cars_num/partials/template.php');
             </div>
         </div>
     </div>");
+}
+?> 
+
+<section class='flex flex-col antialiased bg-gray-100 text-gray-600 min-h-screen p-4'>
+    <?php
+    print("request:{$_POST['plate']}");
+    if($_SESSION['Cache'] && $_SESSION['info']['ActualNB']==$_POST['plate']){
+        $array=$_SESSION['info'];
+    }
+    else if (!empty($_POST['plate'])) {
+        require("cars_num/database/connection.php");
+        $query = "SELECT * from cars_NB WHERE ActualNB='{$_POST['plate']}'";
+        $result = $db->query($connection, $query);
+        while ($info = mysqli_fetch_assoc($result)) {
+            $_SESSION['Cache'] =$info;
+            $_SESSION['info'] =$info;           
+            $array=$info;
         }
     }
+    display($array);
 
     ?> 
 </section>

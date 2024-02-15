@@ -1,6 +1,6 @@
 <?php
 # Include necessary files
-
+session_start();
 #Global Variables
 require(".main/env/env.php");
 
@@ -13,6 +13,7 @@ require(".main/functions/fetch.php");
 #Route
 require("router.php");
 
+$_SESSION['Name']="Freddy";
 #something new
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
