@@ -10,7 +10,7 @@ require("bookstore/partials/template.php");
       <?php
       require("bookstore/database/connection.php");
       // Include the fetch_database.php file to fetch data from the database
-      require("main/database/fetch.php");
+      require(".main/database/fetch.php");
       require("bookstore/function/display.php");
       $row = fetch($result);
       if(!$row){

@@ -1,6 +1,6 @@
 <?php
-require('main/database/connect.php');
-require("main/database/fetch.php");
+require('.main/database/connect.php');
+require(".main/database/fetch.php");
 $db = connection('Cars_num');
 
 $connection = $db->connect();

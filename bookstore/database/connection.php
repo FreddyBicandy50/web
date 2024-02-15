@@ -1,6 +1,6 @@
 <?php
 $request = explode("=", $_GET['request']);
-require('main/database/connect.php');
+require('.main/database/connect.php');
 if(is_public($_SERVER[$name]))
         $db = connection('if0_35693876_bookstore');
 else

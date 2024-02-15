@@ -18,7 +18,7 @@ require("bookstore/function/display.php");
       } else {
 
         require("bookstore/database/connection.php");
-        require("main/database/fetch.php");
+        require(".main/database/fetch.php");
         $row = fetch($result);
         if (!$row) label("Not found");
         else display($row, $book);

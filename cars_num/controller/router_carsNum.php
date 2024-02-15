@@ -1,7 +1,5 @@
 <?php
-    require("cars_num/partials/router.php");
-    $request = explode("!", $_GET['request']);
-  
+    
     if(URL($carsNum_main) || URL($carsNum_main.'/')){
       die(require("cars_num/page/search.php"));
   }
