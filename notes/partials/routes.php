@@ -2,19 +2,19 @@
 $_DIR_ = 'notes/';
 
 $notes_router = [
-    'signIn' => '/sign_in',
-    'Register' => '/register',
+    'sign_in' => '/notes/sign_in',
+    'Register' => '/notes/register',
     'main' => '/notes/',
     'description' => '/notes/description',
     'create' => '/notes/create',
-    'submit' => '/notes/create?Redirect'
+    'REST' => ['/notes/?request=sign_in', '/notes/?request=register', '/notes/?request=create', '/notes/?request=delete']
 ];
 
 $notes_DIR = [
-    'signIn' => $_DIR_ . 'page/sign_in.php',
+    'sign_in' => $_DIR_ . 'page/sign_in.php',
     'Register' => $_DIR_ . 'page/register.php',
     'main' => $_DIR_ . 'page/notes.php',
     'description' => $_DIR_ . 'page/description.php',
     'create' => $_DIR_ . 'page/create.php',
-    'submit' => $_DIR_ . 'page/submit.php'
+    'REST' => $_DIR_ . 'function/REST.php'
 ];
