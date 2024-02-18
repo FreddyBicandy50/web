@@ -5,7 +5,8 @@ require('notes/database/query.php');
 $QUERY = new query();
 
 function sign_in($sign_in,$main,$QUERY,$connect,$database,$email,$password){
-    
+
+    echo "<title>Signing in...</title>";
     require('.main/database/fetch.php');
     $user=fetch($QUERY->get_users($connect, $database,$email));  
 
@@ -26,7 +27,8 @@ function sign_in($sign_in,$main,$QUERY,$connect,$database,$email,$password){
     }
 }
 function register(){
-    
+    echo "<title>Registering...</title>";
+
 }
 function create(){
     
@@ -45,6 +47,6 @@ URL($notes_router['REST'][0]) ? sign_in(
     $_POST['password']) : '';
 
 
-    URL($notes_router['REST'][0]) ? register() : '';
+URL($notes_router['REST'][1]) ? register() : '';
 URL($notes_router['REST'][0]) ? create() : '';
 URL($notes_router['REST'][0])? _delete_():'';

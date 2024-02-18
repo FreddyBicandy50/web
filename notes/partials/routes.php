@@ -3,7 +3,7 @@ $_DIR_ = 'notes/';
 
 $notes_router = [
     'sign_in' => '/notes/sign_in',
-    'Register' => '/notes/register',
+    'register' => '/notes/register',
     'main' => '/notes/',
     'description' => '/notes/description',
     'create' => '/notes/create',
@@ -11,8 +11,8 @@ $notes_router = [
 ];
 
 $notes_DIR = [
-    'sign_in' => $_DIR_ . 'page/sign_in.php',
-    'Register' => $_DIR_ . 'page/register.php',
+    'form' => $_DIR_ . 'page/form.php',
+    'Register' => $_DIR_ . 'page/form.php',
     'main' => $_DIR_ . 'page/notes.php',
     'description' => $_DIR_ . 'page/description.php',
     'create' => $_DIR_ . 'page/create.php',
