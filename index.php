@@ -7,6 +7,7 @@ require(".main/env/env.php");
 #DATABASE and FUNCTIONS
 require(".main/database/database.php");
 require(".main/functions/fetch_agent.php");
+require(".main/functions/header.php");
 require(".main/functions/fetch.php");
 
 

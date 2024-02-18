@@ -1,14 +1,16 @@
 <?php
-URL($notes_router['sign_in']) ? $main=true: $main = false;
+URL($notes_router['sign_in']) ? $main = true : $main = false;
 $_SESSION['auth'] = false;
-$main? $page_Title='Sign in':$page_Title='Register';
+$is_page_refreshed = (isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] == 'max-age=0');
+!$is_page_refreshed ? $_SESSION['valid'] = true : '';
+$main ? $page_Title = 'Sign in' : $page_Title = 'Register';
 require("notes/partials/template.php");
 ?>
 
 <div class="flex-col py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
-        <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-600"><?= $main? 'Sign in to your account' : 'Register your account'; ?></h2>
+        <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-600"><?= $main ? 'Sign in to your account' : 'Register your account'; ?></h2>
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -40,7 +42,7 @@ require("notes/partials/template.php");
                     <?= $page_Title ?>
                 </button>
                 <?php
-                if (!$_SESSION['found'] && $main) echo "<p style='color:#ca1629'> Invalid Username or Password</p>";
+                if (!$_SESSION['valid'] && $main) echo "<b><p style='color:#ca1629'> Invalid Username or Password</p></b>";
                 ?>
             </div>
         </form>
