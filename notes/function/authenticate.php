@@ -2,24 +2,35 @@
 
 class authenticate
 {
+    //check user if authentic
     public function auth($object)
     {
-        if ($object['GET_email'] == $object['POST_email']) {
-            if ($object['full_validation_rule'])
-                return $object['GET_password'] == $object['POST_password'] ? true : (new authenticate)->validate(false);
-            return true;
-        }
-        return false;
+        //check user email
+        return
+            $object['GET_password'] == $object['POST_password']
+            ? true : (new authenticate)->validate(false);
     }
+
     public function validate($validation_key)
     {
+
         require("notes/partials/routes.php");
+
         if ($validation_key) {
+            //SET Validation to true
             $_SESSION['valid'] = $_SESSION['auth'] = true;
-            header('location:' . $notes_router['main']);
+            //Redirect to MAIN
+            header(
+                'location:' . $notes_router['main']
+            );
         } else {
+            //SET Validation to false
             $_SESSION['valid'] = $_SESSION['auth'] = false;
-            header('location:' . $notes_router['sign_in']);
+            //Redirect to Sign in
+            header(
+                'location:' . $notes_router['sign_in']
+            );
+            return false;
         }
     }
 }

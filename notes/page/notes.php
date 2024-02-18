@@ -17,7 +17,7 @@ require('notes/function/display.php');
             <?php 
             foreach (
                 fetch(
-                    (new query)->get_all($connect, $database)
+                    (new query)->get_all($_SESSION['connection'], $database)
                 ) as $user) display($user, $notes_router['description']);
             ?> 
         </ul>

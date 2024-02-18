@@ -1,7 +1,7 @@
 <?php
 !$_SESSION['auth'] ? header('location:' . $notes_router['sign_in']) : '';
 
-$Title = 'Description';
+$page_Title = 'Description';
 require('notes/partials/template.php');
 require('notes/function/display.php');
 require('notes/database/query.php');
@@ -26,7 +26,7 @@ require('.main/database/fetch.php');
 
     <?php
     $QUERY = new query();
-    $result = $QUERY->get_details($connect, $database);
+    $result = $QUERY->get_details($_SESSION['connection'], $database);
     $note_desc = fetch($result);
     foreach ($note_desc as $note) {
         display_details($note);
