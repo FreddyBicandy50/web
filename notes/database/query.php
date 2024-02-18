@@ -8,7 +8,7 @@ class query
         return $database->query(
             $connect,
             "SELECT notes.id as note_id , notes.note as content , notes.`date` , notes.due ,users.id as user_id, users.name,users.email,users.image
-        FROM notes JOIN users ON notes.user_id = users.id"
+        FROM notes JOIN users ON notes.user_id = users.id WHERE users.id={$_SESSION['user_id']}"
         );
          
     }
@@ -23,7 +23,7 @@ class query
 
     public function get_users($connect,$database,$user)
     {
-      return $database->query($connect,"SELECT email,password FROM users WHERE email='$user'");
+      return $database->query($connect,"SELECT id,email,password FROM users WHERE email='$user'");
        
     }
 }

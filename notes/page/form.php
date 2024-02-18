@@ -1,6 +1,7 @@
 <?php
 URL($notes_router['sign_in']) ? $main = true : $main = false;
 $_SESSION['auth'] = false;
+$_SESSION['user_id'] = false;
 $is_page_refreshed = (isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] == 'max-age=0');
 !$is_page_refreshed ? $_SESSION['valid'] = true : '';
 $main ? $page_Title = 'Sign in' : $page_Title = 'Register';

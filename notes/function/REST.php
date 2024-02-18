@@ -12,6 +12,9 @@ function sign_in($object)
 
 
 $user = fetch((new query())->get_users($connect, $database, $_POST['email']));
+$_SESSION['user_id']=$user[0]['id'];
+
+
 //if the route is to sign in
 (new authenticate())->validate(
     URL($notes_router['REST'][0]) ? (

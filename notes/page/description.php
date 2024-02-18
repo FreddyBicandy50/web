@@ -1,4 +1,6 @@
 <?php
+!$_SESSION['auth'] ? header('location:' . $notes_router['sign_in']) : '';
+
 $Title = 'Description';
 require('notes/partials/template.php');
 require('notes/function/display.php');
