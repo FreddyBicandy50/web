@@ -9,7 +9,7 @@ require('notes/database/connect.php');
 require('.main/database/fetch.php');
 ?>
 
-<main >
+<main>
     <div class='absolute inset-0 -z-10 overflow-hidden'>
         <svg class='absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]' aria-hidden='true'>
             <defs>
@@ -28,14 +28,11 @@ require('.main/database/fetch.php');
     $QUERY = new query();
     $result = $QUERY->get_details($_SESSION['connection'], $database);
     $note_desc = fetch($result);
-    foreach ($note_desc as $note) {
-        display_details($note);
-    }
-
+    foreach ($note_desc as $note) display_details($note);
 
     ?>
 
 
     </div>
 
-    </main>
+</main>

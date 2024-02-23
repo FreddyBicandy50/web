@@ -14,12 +14,11 @@ require('notes/function/display.php');
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <ul role="list" class="divide-y divide-gray-200">
-            <?php 
-            foreach (
-                fetch(
-                    (new query)->get_all($_SESSION['connection'], $database)
-                ) as $user) display($user, $notes_router['description']);
-            ?> 
+            <?php
+            foreach (fetch(
+                (new query)->get_all($_SESSION['connection'], $database)
+            ) as $user) display($user, $notes_router['description']);
+            ?>
         </ul>
 
     </div>

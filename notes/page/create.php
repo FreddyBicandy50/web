@@ -24,8 +24,8 @@ $Title = "create note" ?>
     </svg>
 </div>
 
-
-<form method="POST" target="_blank" action="/notes/create?Redirect" class="form-container">
+<?=$_SESSION['user_id']?>
+<form method="POST" action="<?= $notes_router['REST'][2] ?>" class="form-container">
     <label for="Create Note" class="block text-sm font-medium leading-6 text-gray-900"></label>
     <div class="relative mt-2 rounded-md shadow-sm">
         <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">

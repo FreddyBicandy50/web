@@ -7,7 +7,7 @@ $notes_router = [
     'main' => '/notes/',
     'description' => '/notes/description',
     'create' => '/notes/create',
-    'REST' => ['/notes/?request=sign_in', '/notes/?request=register', '/notes/?request=create', '/notes/?request=delete']
+    'REST' => ['/notes/?request=sign_in', '/notes/?request=register', '/notes/create/?note=', '/notes/?request=delete']
 ];
 
 $notes_DIR = [

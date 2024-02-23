@@ -54,4 +54,30 @@ class query
                 WHERE email='$user'"
             );
     }
+    public function set_users($connect, $database, $user)
+    {
+        //return all users credentials from database 
+        return
+            $database->query(
+                $connect,
+                "SELECT 
+                    id,
+                    email,
+                    `password` 
+                FROM users 
+                WHERE email='$user'"
+            );
+    }
+    public function set_details($connect, $database, $user_id, $note)
+    {
+       
+        //return all users credentials from database 
+        require("notes/partials/routes.php");
+        header("location:".$notes_router['main']);
+        return
+            $database->query(
+                $connect,
+                "INSERT INTO `notes`(`note`, `user_id`) VALUES ('$note','{$_SESSION['user_id']}')"
+            );
+    }
 }
