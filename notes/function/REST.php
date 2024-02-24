@@ -14,7 +14,6 @@ if (isset($_POST['email'])) {
             $_POST['email']
             )
         );
-    die($user[0]['email']);
     $_SESSION['user_id'] = $user[0]['id'];
 }
 
@@ -27,7 +26,7 @@ function sign_in($object)
     echo "<title>Signing in...</title>";
     return
         //validate user to open gates for main page after success checking 
-        (new authenticate())->auth($object) ?  true : false;
+        (new authenticate())->auth($object) ?  die('true') : false;
 }
 
 //Sign in route Request
