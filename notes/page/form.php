@@ -1,4 +1,5 @@
 <?php
+if ($_SESSION['stack_destroy']) die(header("location:".$notes_router['main']));
 URL($notes_router['sign_in']) ? $main = true : $main = false;
 $_SESSION['auth'] = false;
 $_SESSION['user_id'] = false;
@@ -7,7 +8,6 @@ $is_page_refreshed = (isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CA
 $main ? $page_Title = 'Sign in' : $page_Title = 'Register';
 require("notes/partials/template.php");
 ?>
-
 <div class="flex-col py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">

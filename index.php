@@ -19,6 +19,5 @@ $_SESSION['Name']="Freddy";
 # MAIN PAGE
 # Check if the URI is the root or has a specific parameter
 if (URL('/') || URL('/?i=1')) require($main_page);
-
 # Not Found 404!
 else die(include($notfound_page));

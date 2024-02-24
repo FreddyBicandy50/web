@@ -47,9 +47,7 @@ class query
             $database->query(
                 $connect,
                 "SELECT 
-                    id,
-                    email,
-                    `password` 
+                    *
                 FROM users 
                 WHERE email='$user'"
             );
@@ -68,16 +66,14 @@ class query
                 WHERE email='$user'"
             );
     }
-    public function set_details($connect, $database, $user_id, $note)
+    public function set_details($connect, $database, $user_id, $title,$due,$desc,$getdate)
     {
-       
+
         //return all users credentials from database 
-        require("notes/partials/routes.php");
-        header("location:".$notes_router['main']);
         return
             $database->query(
                 $connect,
-                "INSERT INTO `notes`(`note`, `user_id`) VALUES ('$note','{$_SESSION['user_id']}')"
+                "INSERT INTO `notes`(`note`, `user_id`,`Description`,`due`,`date`) VALUES ('$title','$user_id','$desc','$due','$getdate')"
             );
     }
 }

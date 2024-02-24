@@ -1,6 +1,5 @@
 <?php
-!$_SESSION['auth'] ? header('location:' . $notes_router['sign_in']) : '';
-
+!$_SESSION['auth'] ? header('location:' . $notes_router['sign_in']) : $_SESSION['stack_destroy']=true;
 $page_Title = 'Notes';
 require("notes/partials/template.php");
 require('notes/database/connect.php');

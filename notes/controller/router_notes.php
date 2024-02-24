@@ -17,4 +17,10 @@ $router->get($notes_router['create']) ? die(require($notes_DIR['create'])) : '';
 $router->get($notes_router['REST'][0]) ? die(require($notes_DIR['REST'])) : '';
 $router->get($notes_router['REST'][1]) ? die(require($notes_DIR['REST'])) : '';
 $router->get($notes_router['REST'][2]) ? die(require($notes_DIR['REST'])) : '';
-$router->get($notes_router['REST'][2] . $_GET['note']) ? die(require($notes_DIR['REST'])) : '';
+
+ 
+if ($_GET['request']== $_SESSION['reset']){
+   session_destroy();
+   header("location:".$notes_router['sign_in']);
+}  
+

@@ -1,14 +1,13 @@
 <?php
-$Title = "Create Note";
+$page_Title = "Create";
 require("notes/partials/template.php");
-$Title = "create note" ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <div class='absolute inset-0 -z-10 overflow-hidden'>
     <svg class='absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]' aria-hidden='true'>
@@ -24,7 +23,6 @@ $Title = "create note" ?>
     </svg>
 </div>
 
-<?=$_SESSION['user_id']?>
 <form method="POST" action="<?= $notes_router['REST'][2] ?>" class="form-container">
     <label for="Create Note" class="block text-sm font-medium leading-6 text-gray-900"></label>
     <div class="relative mt-2 rounded-md shadow-sm">
@@ -32,7 +30,17 @@ $Title = "create note" ?>
             <span class="text-gray-500 sm:text-sm"></span>
         </div>
 
-        <input style="margin-left:10px;margin-top:20px" required type="text" name="note" id="note" class="block w-100 rounded-md border-0 py-20 pl-10 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Type your Note here...">
+        <table>
+            <tr>
+                <td>
+                    <input style="margin-left:10px;margin-top:20px" required type="text" name="title" id="title" class="block w-50 rounded-md border-0 py-4 pl-10 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Note Title...">
+                </td>
+                <td>
+                    <input style="margin-left:10px;margin-top:20px" type="text" name="due" id="due" class=" rounded-md border-0 py-2 pl-5 pr-1 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Due Date...">
+                </td>
+            </tr>
+        </table>
+        <input style="margin-left:10px;margin-top:20px" required type="text" name="desc" id="desc" class="block w-100 rounded-md border-0 py-20 pl-10 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Note Description...">
 
 
         <button style="margin-left:10px;margin-top:20px" class='rounded-md bg-indigo-400 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' id="save" name="save">save</button>

@@ -1,5 +1,6 @@
 <?php
 
+require(".main/test/test.php");
 require("bookstore/controller/router_bookstore.php");
 require("datewebsite/controller/router_dateme.php");
 require("webconsole/controller/webconsole.php");
