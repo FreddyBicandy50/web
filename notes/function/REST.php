@@ -4,21 +4,18 @@ require('notes/database/connect.php');      //connection class
 require('.main/database/fetch.php');        //fetch db class
 require('notes/database/query.php');        //querying class
 
-isset($_POST['email']) ? //if we have an email input
-    //fetch the data from database
+
+
+if (isset($_POST['email'])) {
     $user = fetch(
-        //make a query to get this user based on his email
         (new query())->get_users(
             $_SESSION['connection'],
             $database,
-            $_POST['email'] //email submitted
+            $_POST['email']
         )
-    ) .
-    //if we found any store this user id in a session variable
-    $_SESSION['user_id'] = $user[0]['id'] : '';
-
-
-
+    );
+    $_SESSION['user_id'] = $user[0]['id'];
+}
 
 
 
