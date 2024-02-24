@@ -17,18 +17,18 @@
             </div>
             <?php 
             $_SESSION['reset']=rand(1235067, 6524897);
-             URL($notes_router['main']) ?
-            print ("<div align='right' class='mx-auto max-w-7xl px-9 py-6 sm:px-6 lg:px-8'>
+            print(URL($notes_router['main']) ?
+                "<div align='right' class='mx-auto max-w-7xl px-9 py-6 sm:px-6 lg:px-8'>
                 <a href='/notes/sign_in/?request={$_SESSION['reset']}' class='rounded-full bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
                     Sign out</a> 
-            </div>")
+            </div>"
                 : (
                     URL($notes_router['create']) ?
                     "<div align='right' class='mx-auto max-w-7xl px-9 py-6 sm:px-6 lg:px-8'>
                 <a href='/notes/' class='rounded-full bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
                     Home</a> 
             </div>" : ''
-                ) ?>
+                )) ?>
 
 
         </header>
