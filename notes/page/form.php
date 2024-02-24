@@ -1,10 +1,11 @@
 <?php
-if ($_SESSION['stack_destroy']) die(header("location:".$notes_router['main']));
+if ($_SESSION['stack_destroy']) die(header("location:" . $notes_router['main']));
 URL($notes_router['sign_in']) ? $main = true : $main = false;
 $_SESSION['auth'] = false;
 $_SESSION['user_id'] = false;
 $is_page_refreshed = (isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] == 'max-age=0');
-!$is_page_refreshed ? $_SESSION['valid'] = true : '';
+!$is_page_refreshed ? $_SESSION['valid'] = true
+. $_SESSION['pass_match'] = true : '';
 $main ? $page_Title = 'Sign in' : $page_Title = 'Register';
 require("notes/partials/template.php");
 ?>
@@ -16,25 +17,41 @@ require("notes/partials/template.php");
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form class="space-y-6" action="<?php echo $main ? $notes_router['REST'][0] : $notes_router['REST'][1] ?>" method="POST">
+            <?= !$main ?
+                '<div>
+                <label for="name" class="block text-sm font-medium leading-6 text-gray-400">name</label>
+                <div class="mt-2">
+                    <input id="name" name="name" type="text" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>' : ''  ?>
             <div>
                 <label for="email" class="block text-sm font-medium leading-6 text-gray-400">Email address</label>
                 <div class="mt-2">
-                    <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <input id="email" name="email" type="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
 
             <div>
                 <div class="flex items-center justify-between">
                     <label for="password" class="block text-sm font-medium leading-6 text-gray-400">Password</label>
-                    <?php
-                    echo $main ? "<div class='text-sm'>
+                    <?= $main ? "<div class='text-sm'>
                         <a href='#' class='font-semibold text-indigo-600 hover:text-indigo-500'>Forgot password?</a>
                     </div>" : "";
                     ?>
 
                 </div>
                 <div class="mt-2">
-                    <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <input id="password" name="password" type="password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <?php
+                    if (!$main) {
+                        print(
+                            '
+                    <label for="confirm password" class="block text-sm font-medium leading-6 text-gray-400">Confirm Password</label>
+                                    ' .
+                            "<input id='confirm' name='confirm' type='password'  required class='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'>"
+                        );
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -44,6 +61,8 @@ require("notes/partials/template.php");
                 </button>
                 <?php
                 if (!$_SESSION['valid'] && $main) echo "<b><p style='color:#ca1629'> Invalid Username or Password</p></b>";
+                else if (!$_SESSION['valid'] && !$main) echo "<b><p style='color:#ca1629'> email already taken</p></b>";
+                else if (!$_SESSION['pass_match'] && !$main) echo "<b><p style='color:#ca1629'> passwords does not match</p></b>";
                 ?>
             </div>
         </form>

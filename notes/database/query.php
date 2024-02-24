@@ -51,21 +51,18 @@ class query
                 FROM users 
                 WHERE email='$user'"
             );
-    }
-    public function set_users($connect, $database, $user)
+    } 
+    public function set_user($connect, $database, $user)
     {
         //return all users credentials from database 
-        return
-            $database->query(
-                $connect,
-                "SELECT 
-                    id,
-                    email,
-                    `password` 
-                FROM users 
-                WHERE email='$user'"
-            );
-    }
+        $password=password_hash($user['password'],PASSWORD_BCRYPT);
+        return $database->query(
+            $connect,
+            "INSERT 
+                INTO `users`(`name`, `email`, `password`) 
+                VALUES ('{$user['name']}','{$user['email']}','{$password}')"
+        );
+    } 
     public function set_details($connect, $database, $user_id, $title,$due,$desc,$getdate)
     {
 
@@ -76,4 +73,16 @@ class query
                 "INSERT INTO `notes`(`note`, `user_id`,`Description`,`due`,`date`) VALUES ('$title','$user_id','$desc','$due','$getdate')"
             );
     }
+
+    public function del_note($connect, $database, $note_id,$main)
+    {
+        header("location:".$main);
+        //return all users credentials from database 
+        return
+            $database->query(
+                $connect,
+                "DELETE FROM `notes` WHERE `id`=$note_id"
+            );
+    }
+  
 }
