@@ -26,7 +26,7 @@ function sign_in($object)
     echo "<title>Signing in...</title>";
     return
         //validate user to open gates for main page after success checking 
-        (new authenticate())->auth($object) ?  die('true') : false;
+        (new authenticate())->auth($object) ?  true : false;
 }
 
 //Sign in route Request
