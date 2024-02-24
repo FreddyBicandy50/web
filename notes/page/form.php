@@ -5,7 +5,7 @@ $_SESSION['auth'] = false;
 $_SESSION['user_id'] = false;
 $is_page_refreshed = (isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] == 'max-age=0');
 !$is_page_refreshed ? $_SESSION['valid'] = true
-. $_SESSION['pass_match'] = true : '';
+    . $_SESSION['pass_match'] = true : '';
 $main ? $page_Title = 'Sign in' : $page_Title = 'Register';
 require("notes/partials/template.php");
 ?>

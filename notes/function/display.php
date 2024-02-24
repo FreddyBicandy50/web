@@ -1,10 +1,13 @@
 <?php
 
-
+/* FUNCTION USED TO 
+    Display notes for user
+*/
 function display($info, $description)
 {
 
-    return print("
+    return
+        print("
                     <li class='flex justify-between gap-x-6 py-5'>
                         <div class='flex min-w-0 gap-x-4'>
                         <img class='h-12 w-12 flex-none rounded-full bg-gray-50' src='{$info['image']}' alt=''>
@@ -22,12 +25,13 @@ function display($info, $description)
                     <p class='mt-1 text-xs leading-5 text-gray-500'>entry date <time datetime='2023-01-23T13:23Z'>{$info['date']}</time></p>
                 </div>
             </li>"
-    );
+        );
 }
 
 function display_details($note)
 {
-    print("
+    return
+        print("
             <div style='margin-top: 5%;' class='mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10'>
             <div class='lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8'>
             <div class='lg:pr-4'>

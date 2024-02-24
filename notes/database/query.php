@@ -1,15 +1,20 @@
 <?php
-
+/*
+THIS CLASS IS USED TO:
+    send query's to database
+*/
 
 class query
 {
-
+    //Fetch all notes from database
     public function get_all($connect, $database)
     {
         //return all user information from database 
         return
+            //database class -> 
             $database->query(
                 $connect,
+                //QUERY
                 "SELECT 
                     notes.id as note_id , 
                     notes.note as content, 
@@ -24,6 +29,8 @@ class query
                 WHERE users.id={$_SESSION['user_id']}"
             );
     }
+
+    //Get notes descriptions
     public function get_details($connect, $database)
     {
         //return all note description from notes database 
@@ -39,50 +46,86 @@ class query
             WHERE  notes.id={$_GET['request']}"
             );
     }
-
+    //get fetch user email
     public function get_users($connect, $database, $user)
     {
-        //return all users credentials from database 
+        //return all users credentials from database if email submitted is found
         return
+            //database class -> 
             $database->query(
                 $connect,
+                //QUERY
                 "SELECT 
                     *
                 FROM users 
                 WHERE email='$user'"
             );
-    } 
+    }
+    //create new user
     public function set_user($connect, $database, $user)
     {
-        //return all users credentials from database 
-        $password=password_hash($user['password'],PASSWORD_BCRYPT);
-        return $database->query(
-            $connect,
-            "INSERT 
+        //return insert new user into database 
+        $password = password_hash($user['password'], PASSWORD_BCRYPT); //password encryption
+        return
+            //database class -> 
+            $database->query(
+                $connect,
+                //QUERY
+                "INSERT 
                 INTO `users`(`name`, `email`, `password`) 
-                VALUES ('{$user['name']}','{$user['email']}','{$password}')"
-        );
-    } 
-    public function set_details($connect, $database, $user_id, $title,$due,$desc,$getdate)
-    {
-
-        //return all users credentials from database 
-        return
-            $database->query(
-                $connect,
-                "INSERT INTO `notes`(`note`, `user_id`,`Description`,`due`,`date`) VALUES ('$title','$user_id','$desc','$due','$getdate')"
+                VALUES (
+                        '{$user['name']}',
+                        '{$user['email']}',
+                        '{$password}'
+                        )"
             );
     }
 
-    public function del_note($connect, $database, $note_id,$main)
+    //create new note
+    public function set_details($connect, $database, $user_id, $title, $due, $desc, $getdate)
     {
-        header("location:".$main);
-        //return all users credentials from database 
+
+        //insert new notes in the database 
         return
+            //database class -> 
             $database->query(
                 $connect,
-                "DELETE FROM `notes` WHERE `id`=$note_id"
+                //QUERY
+                "INSERT 
+                INTO 
+                `notes`(
+                        `note`, 
+                        `user_id`,
+                        `Description`,
+                        `due`,
+                        `date`
+                    ) 
+                VALUES (
+                        '$title',
+                        '$user_id',
+                        '$desc',
+                        '$due',
+                        '$getdate'
+                    )"
             );
     }
-  
+
+    //deletion a note
+    public function del_note($connect, $database, $note_id, $main)
+    {
+
+        header("location:" . $main); //route to to main page
+        //then delete requested note based on its id {$note_id}
+        return
+            //database class -> 
+            $database->query(
+                $connect,
+                //QUERY
+                "DELETE 
+                FROM 
+                    `notes`
+                WHERE 
+                    `id`=$note_id"
+            );
+    }
 }

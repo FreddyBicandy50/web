@@ -1,7 +1,7 @@
 <?php
 
-require('.main/database/connect.php');
-$database = connection('test');
+require('.main/database/connect.php'); //connection class
+$database = connection('test'); //connect to database 'dbname'
 
 // Check if the connection to the database is successful
 if (!$_SESSION['connection'] = $database->connect()) {
