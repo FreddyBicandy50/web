@@ -12,8 +12,9 @@ if (isset($_POST['email'])) {
             $_SESSION['connection'],
             $database,
             $_POST['email']
-        )
-    );
+            )
+        );
+    die($user[0]['email']);
     $_SESSION['user_id'] = $user[0]['id'];
 }
 
