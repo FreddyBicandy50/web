@@ -8,7 +8,6 @@
     include '.main/css/style.css' ?>
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Title and Fav icon` -->
   <title>Main Page</title>
   <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />

@@ -51,7 +51,7 @@ URL($notes_router['REST'][0]) ?
                 //if found store them in json file
                 (new authenticate())->json_dump(
                     $object = [
-
+                        'encode'=>true,
                         'id' => $user[0]['id'],
                         'name' => $user[0]['name'],
                         'email' => $user[0]['email'],
@@ -148,7 +148,7 @@ function del($auth)
         (
             //decode user saved information's 
             $user = (new authenticate)->json_dump(
-                $object = ['decode' => true] //send decode signal
+                $object = ['encode' => false] //send decode signal
             )['id'] == $_SESSION['user_id'] ?
             del(true) : false //json user id is the same as session call del and authenticate
         )

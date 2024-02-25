@@ -5,11 +5,18 @@ class authenticate
     //check user if authentic
     public function json_dump($object)
     {
-        $myJSON = json_encode($object, true);
-        $file_path = "notes/database/session_data.json";  // You may adjust the path based on your requirements
-
-        file_put_contents($file_path, $myJSON);
-        return true;
+        $file_path = "notes/database/data.json";  // json file path
+        //dump the content (path,encode the array into a json object)    
+        return $object['encode'] ?
+            file_put_contents(
+                $file_path,
+                json_encode($object, true)
+            )
+            : (
+                !$object['encode']? 
+                    json_decode(file_get_contents($file_path), true):''
+            );
+          
     }
 
 
