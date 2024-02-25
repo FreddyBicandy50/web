@@ -18,10 +18,8 @@ class authenticate
 
         //check user email
         if ($object['hash'])
-            return password_verify(
-                password_hash($object['POST_password'], PASSWORD_BCRYPT),
-                $object['GET_password']
-            ) ? true : (new authenticate)->validate(false);
+            return password_verify(password_hash($object['POST_password'], PASSWORD_BCRYPT), $object['GET_password']) ?
+                true : (new authenticate)->validate(false);
         else return
             $object['GET_password'] == $object['POST_password']
             ? true : (new authenticate)->validate(false);
