@@ -12,8 +12,8 @@ if (isset($_POST['email'])) {
             $_SESSION['connection'],
             $database,
             $_POST['email']
-            )
-        );
+        )
+    );
     $_SESSION['user_id'] = $user[0]['id'];
 }
 
@@ -51,7 +51,7 @@ URL($notes_router['REST'][0]) ?
                 //if found store them in json file
                 (new authenticate())->json_dump(
                     $object = [
-                        'encode'=>true,
+                        'encode' => true,
                         'id' => $user[0]['id'],
                         'name' => $user[0]['name'],
                         'email' => $user[0]['email'],
@@ -68,9 +68,7 @@ function sign_up($object)
 {
     echo "<title>Signing up...</title>"; //title page
     //if user input is empty throw error
-    if (
-        empty($object['POST_password']) || empty($object['GET_password'])
-    ) die("<h1>Password is empty</h1>");
+    if (empty($object['POST_password']) || empty($object['GET_password'])) die("<h1>Password is empty</h1>");
 
     return
         //check the user password and confirm if matches;
@@ -87,6 +85,7 @@ URL($notes_router['REST'][1]) ?
             //but if the user email is unique (meaning : user_input!=$db records)
             sign_up(
                 $object = [
+                    "hash"=>false,
                     "name" => $_POST['name'],
                     "email" => $_POST['email'],
                     "POST_password" => $_POST['password'], //password
