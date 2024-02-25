@@ -23,6 +23,7 @@ if (isset($_POST['email'])) {
 function sign_in($object)
 {
 
+
     echo "<title>Signing in...</title>";
     return
         //validate user to open gates for main page after success checking 
