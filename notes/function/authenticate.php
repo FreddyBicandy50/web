@@ -25,8 +25,14 @@ class authenticate
 
         //check user email
         if ($object['hash'])
-            return password_verify(password_hash($object['POST_password'], PASSWORD_BCRYPT), $object['GET_password']) ?
-                true : (new authenticate)->validate(false);
+
+        return
+            //verify password based on current hash and stored hash in db
+            password_verify(
+                //hash current password submit
+                password_hash($object['POST_password'], PASSWORD_BCRYPT),
+                $object['GET_password'] //db stored password
+            ) ? true : (new authenticate)->validate(false); //!verify? do not validate;
         else return
             $object['GET_password'] == $object['POST_password']
             ? true : (new authenticate)->validate(false);
@@ -42,17 +48,14 @@ class authenticate
             //SET Validation to true
             $_SESSION['valid'] = $_SESSION['auth'] = true;
             //Redirect to MAIN
-            header(
-                'location:' . $notes_router['main']
-            );
+            header('location:' . $notes_router['main']);
         } else {
             //SET Validation to false
             $_SESSION['valid'] = $_SESSION['auth'] = false;
             //Redirect to Sign in
-            return URL($notes_router['REST'][1]) ? header('location:' . $notes_router['register']) . $_SESSION['valid'] = true . $_SESSION['pass_match'] = false
-                : header(
-                    'location:' . $notes_router['sign_in']
-                );
+            return URL($notes_router['REST'][1]) ? 
+            header('location:' . $notes_router['register']) . $_SESSION['valid'] = true . $_SESSION['pass_match'] = false
+                : header('location:' . $notes_router['sign_in']);
         }
     }
 }
