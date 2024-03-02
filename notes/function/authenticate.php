@@ -17,7 +17,7 @@ class authenticate
                 json_decode(file_get_contents($file_path), true) : ''
             );
     }
-
+    
 
     public function auth($object)
     {
@@ -42,6 +42,7 @@ class authenticate
     {
 
         require("notes/partials/routes.php"); //notes directory and notes routers
+
         
         //if user trying to register and got unmatched password
         URL($notes_router['REST'][1]) ?

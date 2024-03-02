@@ -85,7 +85,7 @@ URL($notes_router['REST'][1]) ?
             //but if the user email is unique (meaning : user_input!=$db records)
             sign_up(
                 $object = [
-                    "hash"=>false,
+                    "hash" => false,
                     "name" => $_POST['name'],
                     "email" => $_POST['email'],
                     "POST_password" => $_POST['password'], //password
