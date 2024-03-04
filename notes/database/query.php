@@ -64,8 +64,9 @@ class query
     //create new user
     public function set_user($connect, $database, $user)
     {
+     
         //return insert new user into database 
-        $password = password_hash($user['password'], PASSWORD_BCRYPT); //password encryption
+        $password = password_hash($user['POST_password'], PASSWORD_BCRYPT); //password encryption
         return
             //database class -> 
             $database->query(

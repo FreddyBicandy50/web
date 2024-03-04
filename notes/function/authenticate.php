@@ -21,20 +21,11 @@ class authenticate
 
     public function auth($object)
     {
-
         //check user email
-        if ($object['hash'])
-
-            return
-                //verify password based on current hash and stored hash in db
-                password_verify(
-                    //hash current password submit
-                    password_hash($object['POST_password'], PASSWORD_BCRYPT),
-                    $object['GET_password'] //db stored password
-                ) ? true : (new authenticate)->validate(false); //!verify? do not validate;
-        else return
-            $object['GET_password'] == $object['POST_password']
-            ? true : (new authenticate)->validate(false);
+        return password_verify(
+            $object['POST_password'],
+            $object['GET_password']
+        )? (new authenticate)->validate(true) : (new authenticate)->validate(false);
     }
 
 
@@ -44,29 +35,26 @@ class authenticate
         require("notes/partials/routes.php"); //notes directory and notes routers
 
         
-        //if user trying to register and got unmatched password
-        URL($notes_router['REST'][1]) ?
-            header('location:' . $notes_router['register']) . //return to register 
-            $_SESSION['valid'] = true . $_SESSION['pass_match'] = false //display err message
-            : //else
-            //if user trying to sign in and had wrong password
-            header('location:' . $notes_router['sign_in']); //go back to main
-
-        $validation_key ? //is valid?
-            $_SESSION['valid'] = $_SESSION['auth'] = true . //open the gates
-            //Redirect to MAIN user page
-            header('location:' . $notes_router['main'])
-            : //else
+        if($validation_key)  //is valid?
+        {
+            $_SESSION['valid'] =true;
+            $_SESSION['auth'] = true ; //open the gates
+            die(header('location:' . $notes_router['main']));
+        }else{
             //make sure gates are closed and display a error message
-            $_SESSION['valid'] = $_SESSION['auth'] = false .
-            //Stay in Sign in or Register
-            URL($notes_router['REST'][1]) ?
-            //if user trying to register and got unmatched password
-            header('location:' . $notes_router['register']) . //return to register 
-            $_SESSION['valid'] = true . $_SESSION['pass_match'] = false //display err message
-            : //else
-            //if user trying to sign in and had wrong password
-            header('location:' . $notes_router['sign_in']); //go back to main
+            if(URL($notes_router['REST'][1])){
+                //Stay in Sign in or Register
+                //if user trying to register and got unmatched password
+                $_SESSION['valid'] = true;
+                $_SESSION['pass_match'] = false; //display err message
+                die(header('location:' . $notes_router['register']));//return to register 
+            }else{
+                $_SESSION['valid'] = $_SESSION['auth'] = false;
+                //if user trying to sign in and had wrong password
+                die(header('location:' . $notes_router['sign_in'])); //go back to main
+            }
+        }
+       
 
     }
 }

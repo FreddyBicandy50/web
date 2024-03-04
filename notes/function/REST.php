@@ -41,7 +41,7 @@ URL($notes_router['REST'][0]) ?
                 sign_in(
                     //lets authenticate user
                     $object = [
-                        'hash' => false, //using security
+                        'hash' => true, //using security
                         'sign_in' => $notes_router['sign_in'],
                         'main' => $notes_router['main'],
                         'POST_password' => $_POST['password'], //user input
@@ -57,7 +57,6 @@ URL($notes_router['REST'][0]) ?
                         'email' => $user[0]['email'],
                         'password' => $user[0]['password'],
                         'image' => $user[0]['image']
-
                     ]
                 )
                 : '') : false
@@ -69,10 +68,10 @@ function sign_up($object)
     echo "<title>Signing up...</title>"; //title page
     //if user input is empty throw error
     if (empty($object['POST_password']) || empty($object['GET_password'])) die("<h1>Password is empty</h1>");
-
-    return
+   
+    
         //check the user password and confirm if matches;
-        (new authenticate())->auth($object) ?  true : false;
+    return $object['POST_password']==$object['GET_password']?  true: (new authenticate)->validate(false);
 }
 //Register route request
 URL($notes_router['REST'][1]) ?
@@ -85,7 +84,7 @@ URL($notes_router['REST'][1]) ?
             //but if the user email is unique (meaning : user_input!=$db records)
             sign_up(
                 $object = [
-                    "hash" => false,
+                    "verify" => false,
                     "name" => $_POST['name'],
                     "email" => $_POST['email'],
                     "POST_password" => $_POST['password'], //password
