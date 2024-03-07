@@ -1,3 +1,6 @@
 <?php
 
-echo "<h1>Router test</h1>";
+
+if (URL('/counter/')){
+    die(require("daysCounter/page/counter.php"));
+}
