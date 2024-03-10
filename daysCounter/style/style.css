@@ -1,0 +1,97 @@
+
+.heart-rate {
+  width: 150px;
+  height: 73px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.fade-in {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e8f0;
+  top: 0;
+  right: 0;
+  animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -120%;
+  animation: heartRateOut 2.5s linear infinite;
+  background: rgb(226, 232, 240);
+  background: -moz-linear-gradient(
+    left,
+    rgb(226, 232, 240) 0%,
+    rgb(226, 232, 240) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(226, 232, 240) 0%,
+    rgb(226, 232, 240) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgb(226, 232, 240) 0%,
+    rgb(226, 232, 240) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgb(226, 232, 240) 0%,
+    rgb(226, 232, 240) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(226, 232, 240) 0%,
+    rgb(226, 232, 240) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+@keyframes heartRateIn {
+  0% {
+    width: 100%;
+  }
+
+  50% {
+    width: 0;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes heartRateOut {
+  0% {
+    left: -120%;
+  }
+
+  30% {
+    left: -120%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+p {
+  font-size: 5em;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.75),
+    -20px -20px 30px rgba(0, 0, 0, 0.75);
+}
+
+h6 {
+  font-size: 4em;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75),
+    -20px -20px 30px rgba(0, 0, 0, 0.75);
+}

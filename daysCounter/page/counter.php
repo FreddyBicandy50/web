@@ -7,81 +7,21 @@
    <!-- Title and Fav icon` -->
    <title>Main Page</title>
    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
-
-   <!-- Tailwind CSS and Theme Switching -->
-   <script src=<?= $css_tailwind ?>></script>
    <style>
-      .heart-rate {
-         width: 150px;
-         height: 73px;
-         position: relative;
-         margin: 20px auto;
+      body {
+         background-image: url('splash.png');
       }
 
-      .fade-in {
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         background-color: #e2e8f0;
-         top: 0;
-         right: 0;
-         animation: heartRateIn 2.5s linear infinite;
-      }
-
-      .fade-out {
-         position: absolute;
-         width: 120%;
-         height: 100%;
-         top: 0;
-         left: -120%;
-         animation: heartRateOut 2.5s linear infinite;
-         background: rgb(226, 232, 240);
-         background: -moz-linear-gradient(left, rgb(226, 232, 240) 0%, rgb(226, 232, 240) 50%, rgba(0, 0, 0, 0) 100%);
-         background: -webkit-linear-gradient(left, rgb(226, 232, 240) 0%, rgb(226, 232, 240) 50%, rgba(0, 0, 0, 0) 100%);
-         background: -o-linear-gradient(left, rgb(226, 232, 240) 0%, rgb(226, 232, 240) 50%, rgba(0, 0, 0, 0) 100%);
-         background: -ms-linear-gradient(left, rgb(226, 232, 240) 0%, rgb(226, 232, 240) 50%, rgba(0, 0, 0, 0) 100%);
-         background: linear-gradient(to right, rgb(226, 232, 240) 0%, rgb(226, 232, 240) 80%, rgba(0, 0, 0, 0) 100%);
-      }
-
-      @keyframes heartRateIn {
-         0% {
-            width: 100%;
-         }
-
-         50% {
-            width: 0;
-         }
-
-         100% {
-            width: 0;
-         }
-      }
-
-      @keyframes heartRateOut {
-         0% {
-            left: -120%;
-         }
-
-         30% {
-            left: -120%;
-         }
-
-         100% {
-            left: 0;
-         }
-      }
-
-      p {
-         font-size: 5em;
-         text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.75),
-            -20px -20px 30px rgba(0, 0, 0, 0.75);
-      }
+      <?=
+      include 'daysCounter/style/style.css' ?>
    </style>
+   <!-- Tailwind CSS and Theme Switching -->
    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 </head>
 
-<body bgcolor="#e2e8f0">
+<body>
+      <img src="">
    <!-- Styling -->
    <div class="relative isolate px-6 pt-14 lg:px-8">
       <!-- Background shapes -->
@@ -96,6 +36,7 @@
          <!-- Main content -->
          <div class="text-center">
             <!-- Welcome message -->
+
             <p style="color:#000000" id="main_title" class="text-1xl font-bold tracking-tight sm:text-6xl">
                لِتَسْكُنْ فِيكُمْ كَلِمَةُ ٱلْمَسِيحِ
             </p>
@@ -103,9 +44,10 @@
 
             <div style="margin-top:7%; margin-left:40%" class="heart-rate">
 
-               <h3 style="color:#ad64ff;margin-top:6%" id="main_title" class="text-1xl font-bold tracking-tight sm:text-5xl">
+               <h3 style="color:#ad64ff;margin-top:6%" id="main_title" class="text-1xl font-bold tracking-tight sm:text-4xl">
                   بِغِنًى
                </h3>
+
                <div class="fade-in"></div>
                <div class="fade-out"></div>
             </div>
