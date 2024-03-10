@@ -1,5 +1,5 @@
 body {
-   background-image: url('https://raw.githubusercontent.com/FreddyBicandy50/web/main/daysCounter/img/splash.png');
+   background-color:  #e84768;
 }
 .heart-rate {
   width: 150px;
@@ -93,7 +93,7 @@ p {
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 2em;
  
 }
  body {

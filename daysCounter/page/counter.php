@@ -65,7 +65,7 @@
             لِتَسْكُنْ فِيكُمْ كَلِمَةُ ٱلْمَسِيحِ
          </p>
 
-         <div align="center" style="margin-top:5%" class="heart-rate">
+         <div align="center" style="margin-top:2%" class="heart-rate">
             <h3 style="color:#ffffff" id="main_title">
                <i>بِغِنًى</i>
             </h3>
