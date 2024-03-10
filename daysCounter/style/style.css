@@ -1,5 +1,5 @@
 body {
-   background-color:  #e84768;
+   background-color:  #e6395d;
 }
 .heart-rate {
   width: 150px;
@@ -12,7 +12,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #e84768;
+  background-color: #e6395d;
   top: 0;
   right: 0;
   animation: heartRateIn 2.5s linear infinite;
@@ -25,35 +25,35 @@ body {
   top: 0;
   left: -120%;
   animation: heartRateOut 2.5s linear infinite;
-  background: rgb(232, 71, 104);
+  background: rgb(230, 57, 93);
   background: -moz-linear-gradient(
     left,
-    rgb(232, 71, 104) 0%,
-   rgb(232, 71, 104) 50%,
+    rgb(230, 57, 93) 0%,
+   rgb(230, 57, 93) 50%,
     rgba(0, 0, 0, 0) 100%
   );
   background: -webkit-linear-gradient(
     left,
-   rgb(232, 71, 104) 0%,
-   rgb(232, 71, 104) 50%,
+   rgb(230, 57, 93) 0%,
+   rgb(230, 57, 93) 50%,
     rgba(0, 0, 0, 0) 100%
   );
   background: -o-linear-gradient(
     left,
-    rgb(232, 71, 104) 0%,
-    rgb(232, 71, 104) 50%,
+    rgb(230, 57, 93) 0%,
+    rgb(230, 57, 93) 50%,
     rgba(0, 0, 0, 0) 100%
   );
   background: -ms-linear-gradient(
     left,
-    rgb(232, 71, 104) 0%,
-    rgb(232, 71, 104) 50%,
+    rgb(230, 57, 93) 0%,
+    rgb(230, 57, 93) 50%,
     rgba(0, 0, 0, 0) 100%
   );
   background: linear-gradient(
     to right,
-    rgb(232, 71, 104) 0%,
-    rgb(232, 71, 104) 80%,
+    rgb(230, 57, 93) 0%,
+    rgb(230, 57, 93) 80%,
     rgba(0, 0, 0, 0) 100%
   );
 }

@@ -1,6 +1,6 @@
 <?php
-$love_counter_router= 'twin';
+$twin= 'twin';
 
-if (URL("/$love_counter_router") || URL("/$love_counter_router/")|| URL("/$love_counter_router/?")){
+if (URL("/$twin") || URL("/$twin/")|| URL("/$twin/?i=1")){
     die(require("daysCounter/page/counter.php"));
 }
