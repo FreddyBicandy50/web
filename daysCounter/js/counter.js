@@ -1,7 +1,7 @@
   // Function to update the time sections dynamically
     function updateDynamicTimeDisplay() {
-      const currentDate = new Date('2024-03-11T02:11:00');
-      const startDate = new Date('2023-09-05T10:00:00');
+      const currentDate = new Date('2024-03-10T11:50:00');
+      const startDate = new Date('2023-09-05T00:00:00');
 
       const timeDifference = currentDate - startDate;
 
