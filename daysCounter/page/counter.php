@@ -31,13 +31,13 @@
 
    <div class="text-center">
       <!-- Welcome message -->
-      <p align="center" style="margin-top:20%;color:#000000">
+      <p align="center" style="margin-top:5%;color:#000000">
          لِتَسْكُنْ فِيكُمْ كَلِمَةُ ٱلْمَسِيحِ
       </p>
 
       <div align="center" style="margin-top:5%" class="heart-rate">
          <h3 style="color:#ffffff" id="main_title">
-            <i>بِغِنًى</i>
+            <i></i>
          </h3>
 
          <div class="fade-in"></div>
