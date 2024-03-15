@@ -5,7 +5,7 @@
    <!-- Include external CSS file -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Title and Fav icon` -->
-   <title>2023-09-05T10:00:00❤️‍🔥</title>
+   <title>09/05/23❤️‍🔥</title>
    <link rel="icon" type="images/x-icon" class="h-auto w-auto" href="<?php echo $logo_web ?>" />
    <style>
       <?= include 'twinflame/style/style.css' ?>
