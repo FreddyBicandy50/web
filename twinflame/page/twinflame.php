@@ -13,19 +13,18 @@
    <script>
       <?= include 'twinflame/js/counter.js' ?>
    </script>
-   <!-- Tailwind CSS and Theme Switching -->
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+   <script>
+      <?= include 'twinflame/js/confetti.js' ?>
+   </script>
 
 </head>
 <div class="text-center">
-   <!-- Welcome message -->
 
 
    <div align="center" style="margin-top:3%" class="heart-rate">
       <h3 style="color:#ffffff" id="main_title">
          COL:<br><i>3.16-24</i>
       </h3>
-
       <div class="fade-in"></div>
       <div class="fade-out"></div>
 
@@ -43,5 +42,13 @@
 
 </div>
 
-
+<!-- Welcome message -->
+<?php
+if (date('Y/m/d') == '2024/04/13')
+   print('
+         <script type="text/javascript">' .
+      'startConfetti();' .
+      '</script>'
+   );
+?>
 </html>
