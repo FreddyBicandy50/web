@@ -15,6 +15,5 @@ else {
         else 
                 $query = "SELECT * FROM Books WHERE $request[0]='$request[1]'";
 
-                
         $result = $db->query($connection, $query);
 }

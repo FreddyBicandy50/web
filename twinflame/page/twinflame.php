@@ -20,6 +20,7 @@
 </head>
 <?php
 $today = date('Y/m/d');
+
 $confetti = '';
 if ($today == '2024/04/13') $confetti = 'startConfetti()';
 ?>

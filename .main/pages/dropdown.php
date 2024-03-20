@@ -53,7 +53,6 @@
         </div>");
     }
 
-
     # Web Hosting      
     else {
       #main options

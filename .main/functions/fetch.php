@@ -26,7 +26,7 @@ function Mobile($Device)
 function is_public()
 {
     // Compare the HTTP host with the given request
-    if ($_SERVER['SERVER_NAME'] == 'freddybicandy.42web.io') return true;
+    if ($_SERVER['SERVER_NAME'] == "bicandy-new.42web.io") return true;
     return false;
 }
 ?>
