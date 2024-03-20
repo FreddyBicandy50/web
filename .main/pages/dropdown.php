@@ -48,8 +48,8 @@
          </p></a>");
       print(
       "<div id='myDropdown' class='dropdown-content'>
-              <a href='http://$server_private' style=color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$localhost</a>
-              <a href='http://$server_local' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$online</a>
+              <a href='http://$server_local' style=color:#10B981 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$localhost</a>
+              <a href='http://$server_public' style='color:#F87171 ' class='font-bold tracking-tight text-gray-500 sm:text-2xl'>$online</a>
         </div>");
     }
 
