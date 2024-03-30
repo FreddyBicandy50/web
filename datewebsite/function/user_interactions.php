@@ -8,7 +8,7 @@ if (!$connection) {
     // Display an error message if there is an issue connecting to the database
     die("error Connecting to Database error code:" . mysqli_connect_error());
 } else {
-    
+
     // Get the current time and date
     $time = date("h:i:sa");
     $getdate = date('Y/m/d');

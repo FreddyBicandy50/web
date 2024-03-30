@@ -16,8 +16,7 @@ $connect = 'main/database/connect.php';
 $giffy = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif";
 
 
-
-#Main Pages 
+#Main Pages
 $main_page = ".main/pages/main.php";
 $menu_dropdown = ".main/pages/dropdown.php";
 $console_page = "webconsole/webconsole.php";

@@ -1,6 +1,7 @@
 <?php
 
 
-function route($path){
-     header('location:'.$path);
+function route($path)
+{
+    header('location:' . $path);
 }

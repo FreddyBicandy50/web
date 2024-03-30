@@ -15,13 +15,14 @@ require('notes/function/display.php');
         <ul role="list" class="divide-y divide-gray-200">
             <?php
             foreach (fetch(
-                (new query)->get_all($_SESSION['connection'], $database)
-            ) as $user) display($user, $notes_router['description']);
+                         (new query)->get_all($_SESSION['connection'], $database)
+                     ) as $user) display($user, $notes_router['description']);
             ?>
         </ul>
 
     </div>
     <div class='mt-10 flex items-center justify-center gap-x-6'>
-        <a href='/notes/create' style='margin-bottom:10%' class='rounded-full bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
+        <a href='/notes/create' style='margin-bottom:10%'
+           class='rounded-full bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
             create</a>
 </main>

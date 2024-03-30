@@ -17,7 +17,7 @@ require('cars_num/function/display.php');
         }
     } else if ($_SESSION['Cache'] && $_SESSION['info']['ActualNB'] == $_POST['plate']) {
         $array = $_SESSION['info'];
-    }else{
+    } else {
         header('location:/plate');
         exit();
     }

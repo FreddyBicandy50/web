@@ -16,17 +16,18 @@ function HTTP($request)
 }
 
 
-
 function Mobile($Device)
 {
     // Compare the HTTP host with the given request
     if ($Device == 'Linux' || $Device == 'iPhone') return true;
     return false;
 }
+
 function is_public()
 {
     // Compare the HTTP host with the given request
     if ($_SERVER['SERVER_NAME'] == "bicandy-new.42web.io") return true;
     return false;
 }
+
 ?>

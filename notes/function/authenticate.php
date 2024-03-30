@@ -13,11 +13,11 @@ class authenticate
                 json_encode($object, true)
             )
             : (
-                !$object['encode'] ?
+            !$object['encode'] ?
                 json_decode(file_get_contents($file_path), true) : ''
             );
     }
-    
+
 
     public function auth($object)
     {
@@ -25,7 +25,7 @@ class authenticate
         return password_verify(
             $object['POST_password'],
             $object['GET_password']
-        )? (new authenticate)->validate(true) : (new authenticate)->validate(false);
+        ) ? (new authenticate)->validate(true) : (new authenticate)->validate(false);
     }
 
 
@@ -34,27 +34,25 @@ class authenticate
 
         require("notes/partials/routes.php"); //notes directory and notes routers
 
-        
-        if($validation_key)  //is valid?
+
+        if ($validation_key)  //is valid?
         {
-            $_SESSION['valid'] =true;
-            $_SESSION['auth'] = true ; //open the gates
+            $_SESSION['valid'] = true;
+            $_SESSION['auth'] = true; //open the gates
             die(header('location:' . $notes_router['main']));
-        }else{
+        } else {
             //make sure gates are closed and display a error message
-            if(URL($notes_router['REST'][1])){
+            if (URL($notes_router['REST'][1])) {
                 //Stay in Sign in or Register
                 //if user trying to register and got unmatched password
                 $_SESSION['valid'] = true;
                 $_SESSION['pass_match'] = false; //display err message
                 die(header('location:' . $notes_router['register']));//return to register 
-            }else{
+            } else {
                 $_SESSION['valid'] = $_SESSION['auth'] = false;
                 //if user trying to sign in and had wrong password
                 die(header('location:' . $notes_router['sign_in'])); //go back to main
             }
         }
-       
-
     }
 }

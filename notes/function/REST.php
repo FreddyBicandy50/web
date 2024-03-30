@@ -5,7 +5,6 @@ require('.main/database/fetch.php');        //fetch db class
 require('notes/database/query.php');        //querying class
 
 
-
 if (isset($_POST['email'])) {
     $user = fetch(
         (new query())->get_users(
@@ -18,28 +17,27 @@ if (isset($_POST['email'])) {
 }
 
 
-
-//Function to authenticate the sign in 
+//Function to authenticate the sign in
 function sign_in($object)
 {
     echo "<title>Signing in...</title>";
     return
         //validate user to open gates for main page after success checking 
-        (new authenticate())->auth($object) ?  true : false;
+        (new authenticate())->auth($object) ? true : false;
 }
 
 //Sign in route Request
 URL($notes_router['REST'][0]) ?
     //validate user 
     (
-        new authenticate())->validate(
+    new authenticate())->validate(
         //but if the submitted email is found in our records
-        !empty($user) ?
-            //if it does
-            (
-                //call sign in function
+            !empty($user) ?
+                //if it does
+                (
+                    //call sign in function
                 sign_in(
-                    //lets authenticate user
+                //lets authenticate user
                     $object = [
                         'hash' => true, //using security
                         'sign_in' => $notes_router['sign_in'],
@@ -48,19 +46,19 @@ URL($notes_router['REST'][0]) ?
                         'GET_password' => $user[0]['password'] //db password
                     ]
                 ) ?
-                //if found store them in json file
-                (new authenticate())->json_dump(
-                    $object = [
-                        'encode' => true,
-                        'id' => $user[0]['id'],
-                        'name' => $user[0]['name'],
-                        'email' => $user[0]['email'],
-                        'password' => $user[0]['password'],
-                        'image' => $user[0]['image']
-                    ]
-                )
-                : '') : false
-    ) : false;
+                    //if found store them in json file
+                    (new authenticate())->json_dump(
+                        $object = [
+                            'encode' => true,
+                            'id' => $user[0]['id'],
+                            'name' => $user[0]['name'],
+                            'email' => $user[0]['email'],
+                            'password' => $user[0]['password'],
+                            'image' => $user[0]['image']
+                        ]
+                    )
+                    : '') : false
+        ) : false;
 
 //Function sign up accepts an object and validate information's 
 function sign_up($object)
@@ -68,41 +66,42 @@ function sign_up($object)
     echo "<title>Signing up...</title>"; //title page
     //if user input is empty throw error
     if (empty($object['POST_password']) || empty($object['GET_password'])) die("<h1>Password is empty</h1>");
-   
-    
-        //check the user password and confirm if matches;
-    return $object['POST_password']==$object['GET_password']?  true: (new authenticate)->validate(false);
+
+
+    //check the user password and confirm if matches;
+    return $object['POST_password'] == $object['GET_password'] ? true : (new authenticate)->validate(false);
 }
+
 //Register route request
 URL($notes_router['REST'][1]) ?
     (
         //if the user email found in the database close the gate by adding invalid session
-        !empty($user) ?
+    !empty($user) ?
         $_SESSION['valid'] = false . //setting the valid gate to null to display text based error
-        header("location:" . $notes_router['register']) //reroute to the register page (refresh)
+            header("location:" . $notes_router['register']) //reroute to the register page (refresh)
         : (
-            //but if the user email is unique (meaning : user_input!=$db records)
-            sign_up(
-                $object = [
-                    "verify" => false,
-                    "name" => $_POST['name'],
-                    "email" => $_POST['email'],
-                    "POST_password" => $_POST['password'], //password
-                    "GET_password" => $_POST['confirm'] //password confirmation
-                ]
-            ) ?
-            //if passwords check validated
-            (
-                //create the user
-                (new query)->set_user(
-                    $_SESSION['connection'],
-                    $database,
-                    $object //send the user infos
-                ) ?
-                header('location:' . $notes_router['main']) //go to main  this wont work so it will redirect him to sign in 
-                : die('error signing Up') //throw an error if creation failed!
-            ) : ''
-        )
+        //but if the user email is unique (meaning : user_input!=$db records)
+    sign_up(
+        $object = [
+            "verify" => false,
+            "name" => $_POST['name'],
+            "email" => $_POST['email'],
+            "POST_password" => $_POST['password'], //password
+            "GET_password" => $_POST['confirm'] //password confirmation
+        ]
+    ) ?
+        //if passwords check validated
+        (
+            //create the user
+        (new query)->set_user(
+            $_SESSION['connection'],
+            $database,
+            $object //send the user infos
+        ) ?
+            header('location:' . $notes_router['main']) //go to main  this wont work so it will redirect him to sign in
+            : die('error signing Up') //throw an error if creation failed!
+        ) : ''
+    )
     ) : '';
 
 //Function to insert notes
@@ -113,6 +112,7 @@ function insert($dd, $reroute)
     return
         $dd ? header("location:" . $reroute['page']) : die($reroute['error']);
 }
+
 //Creation route request
 URL($notes_router['REST'][2]) ?
     //call the insert function if the insertion is success
@@ -133,7 +133,6 @@ URL($notes_router['REST'][2]) ?
     ) : '';
 
 
-
 //Note Deletion function
 function del($auth)
 {
@@ -142,21 +141,22 @@ function del($auth)
     return
         //JSON id=SESSION? authorized auth will be true by default the call is false
         !$auth ?
-        //!auth? lets check
-        (
-            //decode user saved information's 
+            //!auth? lets check
+            (
+                //decode user saved information's
             $user = (new authenticate)->json_dump(
                 $object = ['encode' => false] //send decode signal
             )['id'] == $_SESSION['user_id'] ?
-            del(true) : false //json user id is the same as session call del and authenticate
-        )
-        : true; //if authenticated send true 
+                del(true) : false //json user id is the same as session call del and authenticate
+            )
+            : true; //if authenticated send true
 }
+
 //Deletion Request
 URL($notes_router['REST'][3] . $_GET['request']) ?
     (
         //check user session id and json file id  
-        del(false) ? //authenticated?
+    del(false) ? //authenticated?
         //query the deletion
         (new query)->del_note(
             $_SESSION['connection'],

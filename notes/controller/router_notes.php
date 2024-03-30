@@ -22,5 +22,5 @@ $router->get($notes_router['REST'][3] . $_GET['request']) ? die(require($notes_D
 
 //signing out 
 $_GET['request'] == $_SESSION['reset'] ?
-   session_destroy() .//destroy all saved sessions
-   header("location:" . $notes_router['sign_in']) : '';//route back to sign in page
+    session_destroy() .//destroy all saved sessions
+    header("location:" . $notes_router['sign_in']) : '';//route back to sign in page
