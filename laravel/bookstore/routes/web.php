@@ -1,15 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\books;
+use App\Models\Books_list;
+
+
 
 Route::get('/', function () {
-    return view('library',['books'=>books::get_all()]);
+    return view('library',['books'=>Books_list::all()]);
 });
 
 
 Route::get('/book/{id}', function () {
-    return view('book',['book'=>books::get_book(explode('book/',Request()->url())[1])]);
+    $id=explode('book/',Request()->url())[1]-1;
+    return view('book',['book'=>Books_list::all()[$id]]);
 });
 
 
