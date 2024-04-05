@@ -24,7 +24,7 @@ use App\Models\books;
                 </a>
             </td>
         </tr>
-
+        
     </table>
 
 </x-layout>
