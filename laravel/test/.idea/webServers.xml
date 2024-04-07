@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9dcf668d-7982-46c1-bfd0-b967126b6cf8" name="Raspberry" url="http://raspberrypi.tail4bb6a.ts.net/">
+        <fileTransfer rootFolder="/var/www/web/laravel/test" accessType="SFTP" host="raspberrypi.tail4bb6a.ts.net" port="22" sshConfigId="2a8a7c38-52e9-4f92-9370-2dd63c1f175e" sshConfig="null@raspberrypi.tail4bb6a.ts.net:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" isUseSudo="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="d6ccdd43-1dc0-4db3-9805-5bc8ad2ef7ef" name="Hyperv" url="http://hyperv.tail4bb6a.ts.net/">
+        <fileTransfer rootFolder="/var/www/web/laravel/test" accessType="SFTP" host="hyperv.tail4bb6a.ts.net" port="22" sshConfigId="5f93a8d0-3650-4ff1-9867-24ebe5689eff" sshConfig="hyper@hyperv.tail4bb6a.ts.net:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" isUseSudo="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
