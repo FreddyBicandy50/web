@@ -1,7 +1,7 @@
 <?php
 require("datewebsite/partials/vars.php");
 # Date me Website
-if (URL($dateme_main))
+if (URL($dateme_main) || URL($dateme_main.'/') || URL($dateme_main.'?i=1') )
     # gowme
     die(require("datewebsite/page/date.php"));
 else if (URL($dateme_yes)) {
