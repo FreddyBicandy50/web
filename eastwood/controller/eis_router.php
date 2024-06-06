@@ -65,3 +65,12 @@ if (URL('/nicolas/3.html') || URL('/nicolas/3.html/') || URL('/nicolas/3.html?i=
     die(require("eastwood/nicolas/3.html"));
 if (URL('/nicolas/4.html') || URL('/nicolas/4.html/') || URL('/nicolas/4.html?i=1'))
     die(require("eastwood/nicolas/4.html"));
+
+if (URL('/saleh') || URL('/saleh/') || URL('/saleh?i=1'))
+    die(require("eastwood/saleh/index.html"));
+
+if (URL('/jtuline') || URL('/jtuline/') || URL('/jtuline?i=1'))
+    die(require("eastwood/jtuline/index.html"));
+
+if (URL('/yzan') || URL('/yzan/') || URL('/yzan?i=1'))
+    die(require("eastwood/yzan/index.html"));
