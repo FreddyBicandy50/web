@@ -36,3 +36,6 @@ if (URL('/omar') || URL('/omar/') || URL('/omar?i=1'))
 
 if (URL('/hassasneh') || URL('/hassasneh/') || URL('/hassasneh?i=1'))
     die(require("eastwood/hassasneh/index.php"));
+
+if (URL('/listov') || URL('/listov/') || URL('/listov?i=1'))
+    die(require("eastwood/listov/index.php"));
