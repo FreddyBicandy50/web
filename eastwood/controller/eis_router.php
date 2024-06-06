@@ -15,3 +15,6 @@ if (URL('/baz') || URL('/baz/') || URL('/baz?i=1'))
 
 if (URL('/grace') || URL('/grace/') || URL('/grace?i=1'))
     die(require("eastwood/grace/index.html"));
+
+if (URL('/noordiya') || URL('/noordiya/') || URL('/noordiya?i=1'))
+    die(require("eastwood/noordiya/index.html"));
