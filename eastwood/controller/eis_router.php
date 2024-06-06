@@ -18,3 +18,10 @@ if (URL('/grace') || URL('/grace/') || URL('/grace?i=1'))
 
 if (URL('/noordiya') || URL('/noordiya/') || URL('/noordiya?i=1'))
     die(require("eastwood/noordiya/index.html"));
+
+if (URL('/reem') || URL('/reem/') || URL('/reem?i=1'))
+    die(require("eastwood/reem/index.html"));
+
+
+if (URL('/antoine') || URL('/antoine/') || URL('/antoine?i=1'))
+    die(require("eastwood/antoine/index.html"));
