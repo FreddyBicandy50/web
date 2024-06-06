@@ -39,3 +39,14 @@ if (URL('/hassasneh') || URL('/hassasneh/') || URL('/hassasneh?i=1'))
 
 if (URL('/listov') || URL('/listov/') || URL('/listov?i=1'))
     die(require("eastwood/listov/index.php"));
+
+
+if (URL('/listov') || URL('/listov/') || URL('/listov?i=1'))
+    die(require("eastwood/listov/index.php"));
+
+if (URL('/peter') || URL('/peter/') || URL('/peter?i=1'))
+    die(require("eastwood/peter/index.html"));
+
+    
+if (URL('/peter') || URL('/peter/') || URL('/peter?i=1'))
+    die(require("eastwood/peter/index.html"));
