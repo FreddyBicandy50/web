@@ -47,6 +47,10 @@ if (URL('/listov') || URL('/listov/') || URL('/listov?i=1'))
 if (URL('/peter') || URL('/peter/') || URL('/peter?i=1'))
     die(require("eastwood/peter/index.html"));
 
-    
-if (URL('/peter') || URL('/peter/') || URL('/peter?i=1'))
-    die(require("eastwood/peter/index.html"));
+
+if (URL('/lana') || URL('/lana/') || URL('/lana?i=1'))
+    die(require("eastwood/lana/index.html"));
+
+
+if (URL('/saddi') || URL('/saddi/') || URL('/saddi?i=1'))
+    die(require("eastwood/saddi/index.html"));
