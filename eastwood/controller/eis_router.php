@@ -54,3 +54,14 @@ if (URL('/lana') || URL('/lana/') || URL('/lana?i=1'))
 
 if (URL('/saddi') || URL('/saddi/') || URL('/saddi?i=1'))
     die(require("eastwood/saddi/index.html"));
+
+if (URL('/nicolas') || URL('/nicolas/') || URL('/nicolas?i=1'))
+    die(require("eastwood/nicolas/index.html"));
+if (URL('/nicolas/1.html') || URL('/nicolas/1.html/') || URL('/nicolas/1.html?i=1'))
+    die(require("eastwood/nicolas/1.html"));
+if (URL('/nicolas/2.html') || URL('/nicolas/2.html/') || URL('/nicolas/2.html?i=1'))
+    die(require("eastwood/nicolas/2.html"));
+if (URL('/nicolas/3.html') || URL('/nicolas/3.html/') || URL('/nicolas/3.html?i=1'))
+    die(require("eastwood/nicolas/3.html"));
+if (URL('/nicolas/4.html') || URL('/nicolas/4.html/') || URL('/nicolas/4.html?i=1'))
+    die(require("eastwood/nicolas/4.html"));
