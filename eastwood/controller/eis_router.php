@@ -35,7 +35,7 @@ if (URL('/omar') || URL('/omar/') || URL('/omar?i=1'))
 
 
 if (URL('/hassasneh') || URL('/hassasneh/') || URL('/hassasneh?i=1'))
-    die(require("eastwood/hassasneh/index.php"));
+    die(require("eastwood/hassasneh/index.html"));
 
 if (URL('/listov') || URL('/listov/') || URL('/listov?i=1'))
     die(require("eastwood/listov/index.php"));
@@ -74,3 +74,22 @@ if (URL('/jtuline') || URL('/jtuline/') || URL('/jtuline?i=1'))
 
 if (URL('/yzan') || URL('/yzan/') || URL('/yzan?i=1'))
     die(require("eastwood/yzan/index.html"));
+
+
+if (URL('/ryan') || URL('/ryan/') || URL('/ryan?i=1'))
+    die(require("eastwood/ryan/index.html"));
+
+
+if (URL('/yara') || URL('/yara/') || URL('/yara?i=1'))
+    die(require("eastwood/yara/index.html"));
+
+if (URL('/ahmad') || URL('/ahmad/') || URL('/ahmad?i=1'))
+    die(require("eastwood/ahmad/index.html"));
+
+
+if (URL('/metri') || URL('/metri/') || URL('/metri?i=1'))
+    die(require("eastwood/metri/index.html"));
+
+
+if (URL('/thea') || URL('/thea/') || URL('/thea?i=1'))
+    die(require("eastwood/thea/index.html"));
