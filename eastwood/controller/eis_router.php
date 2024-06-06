@@ -12,7 +12,6 @@ if (URL('/hindawi') || URL('/hindawi/') || URL('/hindawi?i=1'))
 if (URL('/baz') || URL('/baz/') || URL('/baz?i=1'))
     die(require("eastwood/baz/index.html"));
 
-
 if (URL('/grace') || URL('/grace/') || URL('/grace?i=1'))
     die(require("eastwood/grace/index.html"));
 
@@ -29,3 +28,7 @@ if (URL('/antoine') || URL('/antoine/') || URL('/antoine?i=1'))
 
 if (URL('/joseph') || URL('/joseph/') || URL('/joseph?i=1'))
     die(require("eastwood/joseph/index.html"));
+
+
+if (URL('/omar') || URL('/omar/') || URL('/omar?i=1'))
+    die(require("eastwood/omar/index.php"));

@@ -10,7 +10,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impact of Automobile Innovation</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        <?=
+        include 'eastwood/omar/style.css' ?>
+    </style>
 </head>
 
 <body>
