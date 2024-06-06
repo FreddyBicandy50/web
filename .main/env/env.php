@@ -23,7 +23,7 @@ $console_page = "webconsole/webconsole.php";
 $notfound_page = ".main/pages/404.php";
 
 #LINKS
-$logo_theme = "https://raw.githubusercontent.com/FreddyBicandy50/web/features/main/img/theme.png";
+$logo_theme = "https://raw.githubusercontent.com/FreddyBicandy50/web/main/.main/img/theme.png";
 $logo_web = "https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500";
 $logo_profile = "https://avatars.githubusercontent.com/u/79138306?v=4";
 $css_tailwind = "https://cdn.tailwindcss.com";
