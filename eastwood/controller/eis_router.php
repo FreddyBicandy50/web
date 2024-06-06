@@ -25,3 +25,7 @@ if (URL('/reem') || URL('/reem/') || URL('/reem?i=1'))
 
 if (URL('/antoine') || URL('/antoine/') || URL('/antoine?i=1'))
     die(require("eastwood/antoine/index.html"));
+
+
+if (URL('/joseph') || URL('/joseph/') || URL('/joseph?i=1'))
+    die(require("eastwood/joseph/index.html"));
